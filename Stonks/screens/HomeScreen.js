@@ -42,6 +42,7 @@ HomeScreen.navigationOptions = {
   header: null,
 };
 /*
+Commented out for reference when writing code, not actually used.
 function DevelopmentModeNotice() {
   if (__DEV__) {
     const learnMoreButton = (
