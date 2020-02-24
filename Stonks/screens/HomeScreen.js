@@ -21,7 +21,6 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
 
           <Text style={styles.getStartedText}>Create Home Screen Layout:</Text>
 
@@ -42,7 +41,7 @@ export default function HomeScreen() {
 HomeScreen.navigationOptions = {
   header: null,
 };
-
+/*
 function DevelopmentModeNotice() {
   if (__DEV__) {
     const learnMoreButton = (
@@ -75,7 +74,7 @@ function handleHelpPress() {
     'https://docs.expo.io/versions/latest/get-started/create-a-new-app/#making-your-first-change'
   );
 }
-
+*/
 const styles = StyleSheet.create({
   container: {
     flex: 1,
