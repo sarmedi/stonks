@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
-import BeginnerRecommendedScreen from '../screens/BeginnerRecommendedScreen';
+import RecommendedScreen from '../screens/RecommendedScreen';
 import TutorialScreen from "../screens/TutorialScreen";
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -12,16 +12,25 @@ export default function BottomTabNavigator({ navigation, route }) {
   // Set the header title on the parent stack navigator depending on the
   // currently active tab. Learn more in the documentation:
   // https://reactnavigation.org/docs/en/screen-options-resolution.html
-  navigation.setOptions({ headerTitle: getHeaderTitle(route) });
+  navigation.setOptions({ headerTitle: getHeaderTitle(route), headerTintColor: '#fff', headerStyle: {backgroundColor: '#1A741D',} });
 
   return (
-    <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
+    <BottomTab.Navigator 
+      initialRouteName={INITIAL_ROUTE_NAME}
+      tabBarOptions = {{
+        activeTintColor: '#fff',
+        inactiveTintColor: '#D2D2D2',
+        style: {
+          backgroundColor: '#1A741D'
+        },
+      }} 
+    >
       <BottomTab.Screen
         name="Home"
         component={HomeScreen}
         options={{
           title: 'Home',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-home" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={focused ? "home" : "home-outline"} />,
         }}
       />
       <BottomTab.Screen
@@ -29,15 +38,15 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={LinksScreen}
         options={{
           title: 'Search',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-search" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={focused ? "feature-search" : "feature-search-outline"} />,
         }}
       />
       <BottomTab.Screen
         name="Recommended"
-        component={BeginnerRecommendedScreen}
+        component={RecommendedScreen}
         options={{
           title: 'Recommended',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-star" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={focused ? "star" : "star-outline"} />,
         }}
       />
       <BottomTab.Screen
@@ -45,7 +54,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={TutorialScreen}
         options={{
           title: 'Tutorial',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-question" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={focused ? "help-circle" : "help-circle-outline"} />,
         }}
       />
     </BottomTab.Navigator>
