@@ -3,8 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
-import RecommendedScreen from '../screens/RecommendedScreen';
-import SettingsScreen from "../screens/SettingsScreen";
+import BeginnerRecommendedScreen from '../screens/BeginnerRecommendedScreen';
+import TutorialScreen from "../screens/TutorialScreen";
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
 
@@ -21,7 +21,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={HomeScreen}
         options={{
           title: 'Home',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-analytics" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-home" />,
         }}
       />
       <BottomTab.Screen
@@ -34,18 +34,18 @@ export default function BottomTabNavigator({ navigation, route }) {
       />
       <BottomTab.Screen
         name="Recommended"
-        component={RecommendedScreen}
+        component={BeginnerRecommendedScreen}
         options={{
           title: 'Recommended',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-star" />,
         }}
       />
       <BottomTab.Screen
-        name="Settings"
-        component={SettingsScreen}
+        name="Tutorial"
+        component={TutorialScreen}
         options={{
-          title: 'Settings',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          title: 'Tutorial',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-question" />,
         }}
       />
     </BottomTab.Navigator>
@@ -62,7 +62,7 @@ function getHeaderTitle(route) {
       return 'Search';
     case 'Recommended':
       return 'Recommended';
-    case 'Settings':
-      return 'Settings';
+    case 'Tutorial':
+      return 'Tutorial';
   }
 }

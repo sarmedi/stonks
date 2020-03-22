@@ -4,12 +4,12 @@ import { Ionicons } from '@expo/vector-icons';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 import { MonoText } from '../components/StyledText';
 
-export default function RecommendedScreen() {
+export default function TutorialScreen() {
     return (
         <View style={styles.container}>
             <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                 <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-                    <MonoText> Add Code for Recommended Screen</MonoText>
+                    <MonoText> Add Code for Tutorial Screen</MonoText>
                 </View>
             </ScrollView>
         </View>
