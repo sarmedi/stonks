@@ -4,30 +4,49 @@ import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 
-import { SearchBar } from 'react-native-elements';
+import SearchBar from 'react-native-dynamic-search-bar';
 
-export default class App extends React.Component {
-  state = {
-    search: '',
-  };
+<SearchBar
+   onPressToFocus
+   autoFocus={false}
+   fontColor="#c6c6c6"
+   iconColor="#c6c6c6"
+   shadowColor="#282828"
+   cancelIconColor="#c6c6c6"
+   backgroundColor="#353d5e"
+   placeholder="Search here"
+   onChangeText={text => {
+     this.filterList(text);
+   }}
+   onPressCancel={() => {
+     this.filterList("");
+   }}
+   onPress={() => alert("onPress")}
+ />
+ 
 
-  updateSearch = search => {
-    this.setState({ search });
-  };
+// export default class App extends React.Component {
+//   state = {
+//     search: '',
+//   };
 
-  render() {
-    const { search } = this.state;
+//   updateSearch = search => {
+//     this.setState({ search });
+//   };
 
-    return (
-      <SearchBar
-        style={styles.container}
-        placeholder="Type Here..."
-        onChangeText={this.updateSearch}
-        value={search}
-      />
-    );
-  }
-}
+//   render() {
+//     const { search } = this.state;
+
+//     return (
+//       <SearchBar
+//         style={styles.container}
+//         placeholder="Type Here..."
+//         onChangeText={this.updateSearch}
+//         value={search}
+//       />
+//     );
+//   }
+// }
 
 
 const styles = StyleSheet.create({
