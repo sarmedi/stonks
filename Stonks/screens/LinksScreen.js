@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator,
+  FlatList, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
@@ -12,16 +13,27 @@ export default class App extends React.Component {
   };
 
   updateSearch = search => {
-    this.setState({ search });
+    const url = 'https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=';
+    const apikey = '&apikey=OJZ1MR03G7F21DHM';
+    fetch(url+search+apikey)
+    .then(response => response.json())
+    .then((responseJson) => {
+      this.setState({
+        dataSource: responseJson.Search,
+      });
+    });
+    
+  
   };
 
   render() {
     const { search } = this.state;
-
+    
     return (
       <SearchBar
         style={styles.container}
         placeholder="Type Here..."
+        
         onChangeText={this.updateSearch}
         value={search}
       />
