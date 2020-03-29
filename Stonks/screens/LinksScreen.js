@@ -1,52 +1,47 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator,
+  FlatList, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 
-import SearchBar from 'react-native-dynamic-search-bar';
+import { SearchBar } from 'react-native-elements';
 
-<SearchBar
-   onPressToFocus
-   autoFocus={false}
-   fontColor="#c6c6c6"
-   iconColor="#c6c6c6"
-   shadowColor="#282828"
-   cancelIconColor="#c6c6c6"
-   backgroundColor="#353d5e"
-   placeholder="Search here"
-   onChangeText={text => {
-     this.filterList(text);
-   }}
-   onPressCancel={() => {
-     this.filterList("");
-   }}
-   onPress={() => alert("onPress")}
- />
- 
+export default class App extends React.Component {
+  state = {
+    search: '',
+  };
 
-// export default class App extends React.Component {
-//   state = {
-//     search: '',
-//   };
+  updateSearch = search => {
+    this.setState({ search });
+    const url = 'https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=';
+    const apikey = '&apikey=OJZ1MR03G7F21DHM';
+    fetch(url+search+apikey)
+    .then(response => response.json())
+    .then((responseJson) => {
+      this.setState({
+        dataSource: responseJson.Search,
+      });
+    });
+    
+  
+  };
 
-//   updateSearch = search => {
-//     this.setState({ search });
-//   };
+  render() {
+    const { search } = this.state;
+    
+    return (
+      <SearchBar
+        style={styles.container}
+        placeholder="Type Here..."
+        
+        onChangeText={this.updateSearch}
+        value={search}
+      />
+    );
+  }
+}
 
-//   render() {
-//     const { search } = this.state;
-
-//     return (
-//       <SearchBar
-//         style={styles.container}
-//         placeholder="Type Here..."
-//         onChangeText={this.updateSearch}
-//         value={search}
-//       />
-//     );
-//   }
-// }
 
 
 const styles = StyleSheet.create({
