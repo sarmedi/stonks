@@ -6,6 +6,8 @@ import { SearchBar } from 'react-native-elements';
 
 // Easily change the API key for testing
 const { API_KEY } = "demo";
+// Our API Key:
+// const { API_KEY } = "OJZ1MR03G7F21DHM";
 
 class Search extends Component {
 
