@@ -44,6 +44,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SearchSuggestions from "../components/SearchSuggestions";
 import { SearchBar } from 'react-native-elements';
+import { MonoText } from '../components/StyledText';
 
 const { API_KEY } = "demo";
 
@@ -63,10 +64,11 @@ class Search extends Component {
     })
   }
 
-  handleInputChange = () => {
+  handleInputChange = search => {
     this.setState({
-      query: this.search.value
+      search
     }, () => {
+      <MonoText> Add Code for Tutorial Screen</MonoText>
       if (this.state.query && this.state.query.length > 1) {
         if (this.state.query.length % 2 === 0) {
           this.getInfo();
@@ -80,8 +82,8 @@ class Search extends Component {
     return (
         <SearchBar
           placeholder="Enter a company or industry...."
-          onChangeText={this.handleInputChange.bind(this)}
-          value={this.state.query}
+          onChangeText={this.handleInputChange}
+          value={search}
         />
     );
   }
