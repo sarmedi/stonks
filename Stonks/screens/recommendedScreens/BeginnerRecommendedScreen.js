@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   item: {
     flex: 1,
-    backgroundColor: '#25b33b',
+    backgroundColor: '#74c284',
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,

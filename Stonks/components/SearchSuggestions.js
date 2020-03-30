@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 const Suggestions = (props) => {
     const options = props.results.map(r => (
-        <li key={r.id}>
+        <Text>
             {r.name}
-        </li>
+        </Text>
     ))
     return <Text>{options}</Text>
 }

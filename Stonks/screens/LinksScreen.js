@@ -66,6 +66,7 @@ class Search extends Component {
   }
 
   handleInputChange = search => {
+    console.log(this.state.query)
     this.setState({
       search
     }, () => {
@@ -80,7 +81,6 @@ class Search extends Component {
       placeholder="Enter a company or industry...."
       onChangeText={this.handleInputChange}
       value={search}
-      
     />
     <Suggestions results={this.state.results} />
     </View>
