@@ -9,6 +9,13 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+
+        <View style={styles.getStartedContainer}>
+
+          <Text style={styles_home.titleText}>$tonks</Text>
+
+        </View>
+
         <View style={styles.welcomeContainer}>
           <Image
             source={
@@ -22,21 +29,33 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
 
-          <Text style={styles.getStartedText}>Create Home Screen Layout:</Text>
+          <Text style={styles_home.titleText2}>{"\n"}{"\n"}Today's Recommended Stocks</Text>
 
           <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText> modify screens/HomeScreen.js</MonoText>
+            <MonoText> AAPL </MonoText>
+            <MonoText> MSFT </MonoText>
+            <MonoText> AMZN </MonoText>
           </View>
-
-          <Text style={styles.getStartedText}>
-            Change any of the text, save the file, .
-          </Text>
         </View>
 
       </ScrollView>
     </View>
   );
 }
+
+var styles_home = StyleSheet.create({
+  titleText: {
+    fontSize: 50,
+    fontWeight: 'bold',
+  },
+  titleText2: {
+    fontSize: 15,
+    fontWeight: 'bold',
+  },
+  homePage: {
+    backgroundColor: '#fafafa'              
+  }
+})
 
 HomeScreen.navigationOptions = {
   header: null,
@@ -80,6 +99,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  homeContainer: {
+    flex: 1,
+    backgroundColor: '#fafafa',
   },
   developmentModeText: {
     marginBottom: 20,
