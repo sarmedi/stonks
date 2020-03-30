@@ -65,7 +65,7 @@ class Search extends Component {
 
   handleInputChange = () => {
     this.setState({
-      query: this.state.query
+      query: this.search.value
     }, () => {
       if (this.state.query && this.state.query.length > 1) {
         if (this.state.query.length % 2 === 0) {
