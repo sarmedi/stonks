@@ -42,11 +42,12 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import SearchSuggestions from "../components/SearchSuggestions";
+import { StyleSheet, Text, View } from 'react-native';
+import Suggestions from "../components/SearchSuggestions";
 import { SearchBar } from 'react-native-elements';
 import { MonoText } from '../components/StyledText';
 
-const { API_KEY } = "demo";
+const { API_KEY } = "OJZ1MR03G7F21DHM";
 
 class Search extends Component {
 
@@ -59,7 +60,7 @@ class Search extends Component {
     axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${this.state.query}&apikey=${API_KEY}`)
     .then(({ data }) => {
       this.setState({
-        results: data.bestMatches
+        results: data.data
       })
     })
   }
@@ -68,23 +69,22 @@ class Search extends Component {
     this.setState({
       search
     }, () => {
-      <MonoText> Add Code for Tutorial Screen</MonoText>
-      if (this.state.query && this.state.query.length > 1) {
-        if (this.state.query.length % 2 === 0) {
-          this.getInfo();
-        }
-      }
+        this.getInfo();
     })
   }
 
   render () {
     const { search } = this.state;
     return (
-        <SearchBar
-          placeholder="Enter a company or industry...."
-          onChangeText={this.handleInputChange}
-          value={search}
-        />
+      <View><SearchBar
+      placeholder="Enter a company or industry...."
+      onChangeText={this.handleInputChange}
+      value={search}
+      
+    />
+    <Suggestions results={this.state.results} />
+    </View>
+        
     );
   }
 }
