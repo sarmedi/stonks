@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-const Suggestions = (props) => {
+import { Text } from 'react-native';
+
+
+const SearchSuggestions = (props) => {
     const options = props.results.map(r => (
-        <Text>
-            {r.name}
-        </Text>
+        <Text>{r.bestMatches}</Text>
     ))
     return <Text>{options}</Text>
 }
 
-export default Suggestions
+export default SearchSuggestions

@@ -3,6 +3,7 @@ import { StyleSheet, SafeAreaView, Text, View, Linking} from 'react-native';
 import TabBarIcon from '../../components/TabBarIcon';
 import { FlatList } from 'react-native-gesture-handler';
 
+// Beginner-level stocks
 const DATA = [
   {
     id: '1',
@@ -33,6 +34,7 @@ const DATA = [
 function Item({ title }) {
   return (
     <View style={styles.item}>
+      {/* Display the chart icon and the title of the stock */}
       <TabBarIcon name="chart-line"/>
       <Text style={styles.title}>{title}</Text>
     </View>
@@ -42,6 +44,7 @@ function Item({ title }) {
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
+      {/* Create a list to show all 6 stocks */}
       <FlatList
         data={DATA}
         renderItem={({ item }) => <Item title={item.title} />}
