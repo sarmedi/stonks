@@ -1,8 +1,4 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Linking} from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { RectButton, ScrollView, FlatList } from 'react-native-gesture-handler';
-import { MonoText } from '../components/StyledText';
 import BeginnerRecommendedScreen from './recommendedScreens/BeginnerRecommendedScreen';
 import IntermediateRecommendedScreen from './recommendedScreens/IntermediateRecommendedScreen';
 import AdvancedRecommendedScreen from './recommendedScreens/AdvancedRecommendedScreen';
@@ -12,6 +8,8 @@ const Tab = createMaterialTopTabNavigator();
 
 export default function myTabs() {
     return (
+        /* Create the menu at the top of the page to switch between
+            different experience levels */
         <Tab.Navigator
             initialRouteName ="Beginner"
             tabBarOptions={{
@@ -25,6 +23,7 @@ export default function myTabs() {
                 },
             }}
         >
+            {/* The 3 screens to navigate between */}
             <Tab.Screen 
                 name='Beginner' 
                 component={BeginnerRecommendedScreen}

@@ -1,60 +1,80 @@
-import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
-import { RectButton, ScrollView } from 'react-native-gesture-handler';
-
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import SearchSuggestions from "../components/SearchSuggestions";
 import { SearchBar } from 'react-native-elements';
 
-export default class App extends React.Component {
-  state = {
-    search: '',
-  };
+// Easily change the API key for testing
+const { API_KEY } = "demo";
+// Our API Key:
+// const { API_KEY } = "OJZ1MR03G7F21DHM";
 
-  updateSearch = search => {
-    this.setState({ search });
-  };
+class Search extends Component {
 
-  render() {
+    // Our current state is defined as a query and results array
+    state = {
+      query: "",
+      results: [],
+    }
+
+  componentDidMount(search) {
+    console.log("Component mount search:", search);
+    // Use this URL to request data from our alpha vantage database
+    axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${search}&apikey=${API_KEY}`)
+    .then(res => {
+      // Update the state of results array
+      this.setState({ results: res.data });
+      console.log("state results:", this.state.results);
+    }) 
+  }
+
+  // Function to update the state with the current search
+  handleInputChange = search => {
+    console.log("Search", search);
+    this.setState({
+      query: search
+    }, () => {
+        // Call the function to execute GET Request
+        this.componentDidMount(search);
+    })
+  }
+
+  render () {
     const { search } = this.state;
-
     return (
-      <SearchBar
-        style={styles.container}
-        placeholder="Type Here..."
-        onChangeText={this.updateSearch}
-        value={search}
-      />
+      <View>
+        <SearchBar
+          placeholder="Enter a company or industry...."
+
+          /* This executes whenever the text changes in
+            the search bar, ends with full query */
+          onChangeText={this.handleInputChange}
+
+          /* This is what the search bar shows on the app
+            when typing */
+          value={this.state.query}
+        />  
+        {/* Show icon on search homepage */}
+        <View style={styles.imageBox}>
+          <Image source={require('../assets/images/search-money-icon.png')} style={styles.actualImage} />
+        </View>
+      </View>
     );
   }
 }
 
+export default Search
 
+// Style the main image on the page
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    color: '#fafafa',
+  imageBox: {
+    flexDirection: 'column', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    height: '88%',
   },
-  contentContainer: {
-    paddingTop: 15,
-  },
-  optionIconContainer: {
-    marginRight: 12,
-  },
-  option: {
-    backgroundColor: '#fdfdfd',
-    paddingHorizontal: 15,
-    paddingVertical: 15,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderBottomWidth: 0,
-    borderColor: '#ededed',
-  },
-  lastOption: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  optionText: {
-    fontSize: 15,
-    alignSelf: 'flex-start',
-    marginTop: 1,
+  actualImage: {
+    width: 250, 
+    height: 250,
   },
 });
