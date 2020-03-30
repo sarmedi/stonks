@@ -7,7 +7,7 @@ This is a Stock Market Forecaster program.
 - Uses Natural Language Processing to find keywords in new articles of stock that we’re interested in. If the tone of the new articles is negative and has our stock keywords, then we know our stocks will likely go down. Automatically stays up to date with the news.
 
 ### Collaborators 
-- Alex Ding
-- Erica Bertolozzi
-- Gregory Saini
-- Sarmed Imadulla
+- [Alex Ding](https://github.com/alexd3301)
+- [Erica Bertolozzi](https://github.com/ericabertolozzi)
+- [Gregory Saini](https://github.com/Defender373)
+- [Sarmed Imadulla](https://github.com/sarmedi)
