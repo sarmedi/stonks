@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { Component } from "react";
+import { ScrollView } from 'react-native-gesture-handler';
 import {StyleSheet, Text, View, Platform, Dimensions } from "react-native";
 import {
     LineChart,
-  } from 'react-native-chart-kit'
+  } from 'react-native-chart-kit';
 
 
 const labels_=['2020-03-26','2020-03-27','2020-03-30','2020-03-31', '2020-04-01','2020-04-02', '2020-04-03'];
@@ -65,7 +66,7 @@ export default class stockPage extends React.Component {
 
     render() {
         return (
-            <View>
+            <ScrollView>
                 <Text style={styles_stock.titleText}>
                     {this.state.ticker}
                 </Text>
@@ -120,7 +121,7 @@ export default class stockPage extends React.Component {
 
                     7 Day Min: {this.state.weekmin}
                 </Text>
-            </View>
+            </ScrollView>
             );
     }
 }

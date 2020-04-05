@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import { FlatList } from 'react-native-gesture-handler';
 import _ from 'lodash';
@@ -12,21 +12,19 @@ const { API_KEY } = "demo";
 
 class Search extends Component {
 
-  // constructor() {
-  //   super();
     // Our current state is defined as a query and results array
     state = {
       query: "",
       results: [],
     }
-  // }
   
   componentDidMount(search) {
     // Use this URL to request data from our alpha vantage database
-    axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${search}&apikey=${API_KEY}`)
+    axios.get(`https://www.alphavantage.co/query?function=symbol_SEARCH&keywords=${search}&apikey=${API_KEY}`)
     .then(res => {
-      let stocks = _.flattenDeep( Array.from(res.data['bestMatches']).map((stock) => [{symbol: stock['1. symbol'], name: stock['2. name'], type: stock['3. type'], region: stock['4. region'], matchScore: stock['9. matchScore']}]) );
+      let stocks = _.flattenDeep( Array.from(res.data['bestMatches']).map((stock) => [{ticker: stock['1. symbol'], name: stock['2. name'], type: stock['3. type'], region: stock['4. region'], matchScore: stock['9. matchScore']}]) );
       // Update the state of results array
+      console.log(stocks);
       this.setState({ results: stocks });
     })
     .catch(error => console.log(error))
@@ -66,11 +64,11 @@ class Search extends Component {
             data={this.state.results}
             renderItem={({ item }) => 
               <View style={styles.overallList}>
-                <View><Text style={styles.searchSymbol}>{item.symbol}</Text></View>
+                <View><Text style={styles.searchticker}>{item.ticker}</Text></View>
                 <View><Text style={styles.searchName}>{item.name}</Text></View>
               </View>
               }
-            keyExtractor={item => item.symbol}
+            keyExtractor={item => item.ticker}
           />
         </View>
       </View>
@@ -93,7 +91,6 @@ const styles = StyleSheet.create({
     height: 200,
   },
   resultList: {
-    // backgroundColor: '#2B2F33',
     backgroundColor: '#fff',
   },
   overallList: {
@@ -102,7 +99,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row'
   },
-  searchSymbol: {
+  searchticker: {
     fontSize: 22,
     color: '#000',
     paddingTop: 6,
