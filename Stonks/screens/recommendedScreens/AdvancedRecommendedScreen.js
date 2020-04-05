@@ -8,26 +8,32 @@ const DATA = [
   {
     id: '1',
     title: 'NYSE:TEVA',
+    ticker: 'TEVA'
   },
   {
     id: '2',
     title: 'NASDAQ:SGMS',
+    ticker: 'SGMS'
   },
   {
     id: '3',
     title: 'NYSE:CHK',
+    ticker: 'CHK'
   },
   {
     id: '4',
     title: 'NYSE:SFL',
+    ticker: 'SFL'
   },
   {
     id: '5',
     title: 'NYSE:CHGG',
+    ticker: "CHGG"
   },
   {
     id: '6',
     title: 'NYSE:SUP',
+    ticker: 'SUP'
   },
 ];
 

@@ -8,26 +8,32 @@ const DATA = [
   {
     id: '1',
     title: 'NYSE:YETI',
+    ticker: 'YETI'
   },
   {
     id: '2',
     title: 'NASDAQ:FRPT',
+    ticker: 'FRPT'
   },
   {
     id: '3',
     title: 'NASDAQ:FIVE',
+    ticker: 'FIVE'
   },
   {
     id: '4',
     title: 'NYSE:SMG',
+    ticker: 'SMG'
   },
   {
     id: '5',
     title: 'NASDAQ:VRNT',
+    ticker: 'VRNT'
   },
   {
     id: '6',
     title: 'NYSE:BEP',
+    ticker: 'BEP'
   },
 ];
 

@@ -3,6 +3,8 @@ import BeginnerRecommendedScreen from './recommendedScreens/BeginnerRecommendedS
 import IntermediateRecommendedScreen from './recommendedScreens/IntermediateRecommendedScreen';
 import AdvancedRecommendedScreen from './recommendedScreens/AdvancedRecommendedScreen';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import stockScreen from "./recommendedScreens/stockScreen";
+import { TabView } from 'react-native-tab-view';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -38,6 +40,11 @@ export default function myTabs() {
                 name='Advanced' 
                 component={AdvancedRecommendedScreen} 
                 options={{ tabBarLabel: 'Advanced' }}
+            />
+            <Tab.Screen
+                name="Test"
+                component={stockScreen} 
+                options={{ tabBarLabel: 'Test' }}
             />
         </Tab.Navigator>
     );

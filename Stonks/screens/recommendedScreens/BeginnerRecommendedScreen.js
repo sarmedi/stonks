@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, Text, View, Linking} from 'react-native';
+import { StyleSheet, SafeAreaView, Text, View, Linking, LayoutAnimation, Platform, UIManager, TouchableOpacity } from 'react-native';
 import TabBarIcon from '../../components/TabBarIcon';
 import { FlatList } from 'react-native-gesture-handler';
 
@@ -8,35 +8,46 @@ const DATA = [
   {
     id: '1',
     title: 'NYSE:HRL',
+    ticker: 'HRL'
   },
   {
     id: '2',
     title: 'NYSE:EPD',
+    ticker:'EPD'
   },
   {
     id: '3',
     title: 'NYSE:VER',
+    ticker: 'VER'
   },
   {
     id: '4',
     title: 'NYSE:T',
+    ticker: 'T'
   },
   {
     id: '5',
     title: 'NASDAQ:INTC',
+    ticker: 'INTC'
   },
   {
     id: '6',
     title: 'NASDAQ:AAPL',
+    ticker: 'AAPL'
   },
 ];
 
 function Item({ title }) {
+  
+  
   return (
     <View style={styles.item}>
+      
+          <TabBarIcon name="chart-line"/>
+          <Text style={styles.title}>{title}</Text>
+      
       {/* Display the chart icon and the title of the stock */}
-      <TabBarIcon name="chart-line"/>
-      <Text style={styles.title}>{title}</Text>
+      
     </View>
   );
 }
