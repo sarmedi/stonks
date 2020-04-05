@@ -3,7 +3,7 @@ import BeginnerRecommendedScreen from './recommendedScreens/BeginnerRecommendedS
 import IntermediateRecommendedScreen from './recommendedScreens/IntermediateRecommendedScreen';
 import AdvancedRecommendedScreen from './recommendedScreens/AdvancedRecommendedScreen';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import stockScreen from "./recommendedScreens/stockScreen";
+import stockScreen from "./recommendedScreens/stockScreen"
 import { TabView } from 'react-native-tab-view';
 
 const Tab = createMaterialTopTabNavigator();
