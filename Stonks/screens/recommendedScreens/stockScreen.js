@@ -6,12 +6,6 @@ import {
   } from 'react-native-chart-kit'
 
 
-
-
-const { API_KEY } = "OJZ1MR03G7F21DHM";
-const test="Time Series (Daily)";
-const othertest='2020-03-26';
-const otherval='4. close';
 const labels_=['2020-03-26','2020-03-27','2020-03-30','2020-03-31', '2020-04-01','2020-04-02', '2020-04-03'];
 const formatted_labels = ['03/26','03/27','03/30','03/31', '04/01','04/02', '04/03'];
 export default class stockPage extends React.Component {
