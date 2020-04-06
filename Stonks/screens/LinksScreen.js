@@ -4,6 +4,7 @@ import { Image, StyleSheet, Text, View, TouchableHighlight } from 'react-native'
 import { SearchBar } from 'react-native-elements';
 import { FlatList } from 'react-native-gesture-handler';
 import _ from 'lodash';
+import { removeOrientationChangeListener } from 'expo/build/ScreenOrientation/ScreenOrientation';
 
 // Easily change the API key for testing
 const { API_KEY } = "demo";
@@ -24,7 +25,6 @@ class Search extends Component {
     .then(res => {
       let stocks = _.flattenDeep( Array.from(res.data['bestMatches']).map((stock) => [{ticker: stock['1. symbol'], name: stock['2. name'], type: stock['3. type'], region: stock['4. region'], matchScore: stock['9. matchScore']}]) );
       // Update the state of results array
-      console.log(stocks);
       this.setState({ results: stocks });
     })
     .catch(error => console.log(error))
@@ -38,6 +38,17 @@ class Search extends Component {
         // Call the function to execute GET Request
         this.componentDidMount(search);
     })
+  }
+
+  /* Function to reset the state variables when the x is
+    pressed on the search bar */
+  clearAll = x => {
+    this.setState({query: "", results: []});
+  }
+
+  // WHERE TO LINK TO THE CURRENT PAGE
+  onPressStock() {
+    alert('You tapped the button!');
   }
 
   render () {
@@ -54,6 +65,8 @@ class Search extends Component {
           /* This is what the search bar shows on the app
             when typing */
           value={this.state.query}
+
+          onClear={this.clearAll}
         />
         {/* Show icon on search homepage */}
         {/* <View style={styles.imageBox}>
@@ -63,10 +76,12 @@ class Search extends Component {
           <FlatList 
             data={this.state.results}
             renderItem={({ item }) => 
-              <View style={styles.overallList}>
-                <View><Text style={styles.searchticker}>{item.ticker}</Text></View>
-                <View><Text style={styles.searchName}>{item.name}</Text></View>
-              </View>
+              <TouchableHighlight onPress={this.onPressStock}>
+                <View style={styles.overallList}>
+                  <View><Text style={styles.searchticker}>{item.ticker}</Text></View>
+                  <View><Text style={styles.searchName}>{item.name}</Text></View>
+                </View>
+              </TouchableHighlight>
               }
             keyExtractor={item => item.ticker}
           />
