@@ -23,14 +23,13 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
 
-          <Text style={styles_home.titleTextA}>{"\n"}{"\n"}Today's Recommended Stocks</Text>
-          <Text></Text>
+          <Text style={styles_home.titleTextA}>Today's Recommended Stocks</Text>
           <Card
             title='AAPL'
             image={require('../assets/images/Apple_gray_logo.png')}>
             <Button
     icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
     onPress={() => navigation.navigate('Stock Page', {ticker: "AAPL"})}
     title='VIEW NOW' />
           </Card>
@@ -39,7 +38,7 @@ export default function HomeScreen() {
             image={require('../assets/images/msft_logo_crop.jpg')}>
             <Button
     icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
     onPress={() => navigation.navigate('Stock Page', {ticker: "MSFT"})}
     title='VIEW NOW' />
           </Card>
@@ -48,7 +47,7 @@ export default function HomeScreen() {
             image={require('../assets/images/amazon-logo-square.png')}>
             <Button
     icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
     onPress={() => navigation.navigate('Stock Page', {ticker: "AMZN"})}
     title='VIEW NOW' />
           </Card>

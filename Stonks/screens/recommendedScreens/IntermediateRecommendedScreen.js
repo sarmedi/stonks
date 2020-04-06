@@ -39,10 +39,10 @@ const DATA = [
 
 function Item({ title }) {
   return (
+    /* Display the chart icon and the title of the stock */
     <View style={styles.item}>
-      {/* Display the chart icon and the title of the stock */}
-      <TabBarIcon name="chart-line"/>
-      <Text style={styles.title}>{title}</Text>
+        <View><TabBarIcon style={{tintColor: '#fff'}} name="chart-line"/></View>
+        <View><Text style={styles.title}>{title}</Text></View>
     </View>
   );
 }
@@ -72,6 +72,8 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
+    justifyContent: 'center',
+    flexDirection: 'row',
   },
   title: {
     fontSize: 20,
