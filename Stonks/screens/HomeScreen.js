@@ -62,14 +62,14 @@ export default function HomeScreen() {
 
 var styles_home = StyleSheet.create({
   titleText: {
-    fontSize: 50,
+    fontSize: 60,
     fontWeight: 'bold',
-
+    fontFamily: 'Copperplate',
+    color: '#1A741D',
   },
   titleText2: {
     fontSize: 40,
     fontWeight: 'bold',
-
   },
   titleText3: {
     fontSize: 35,
@@ -82,8 +82,9 @@ var styles_home = StyleSheet.create({
   titleTextA: {
     fontSize: 35,
     fontWeight: 'bold',
-    textAlign: 'left'
-    
+    textAlign: 'center',
+    fontStyle: 'italic',
+    color: '#1A741D',
   },
 })
 
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
   },
   welcomeImage: {
     width: 100,
-    height: 80,
+    height: 100,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
