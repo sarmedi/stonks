@@ -5,9 +5,10 @@ import AdvancedRecommendedScreen from './recommendedScreens/AdvancedRecommendedS
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import stockScreen from "./recommendedScreens/stockScreen"
 import { TabView } from 'react-native-tab-view';
+import StockPage from './recommendedScreens/stockScreen';
 
 const Tab = createMaterialTopTabNavigator();
-
+const vara = "HRL";
 export default function myTabs() {
     return (
         /* Create the menu at the top of the page to switch between
@@ -41,11 +42,7 @@ export default function myTabs() {
                 component={AdvancedRecommendedScreen} 
                 options={{ tabBarLabel: 'Advanced' }}
             />
-            <Tab.Screen
-                name="Test"
-                component={stockScreen} 
-                options={{ tabBarLabel: 'Test' }}
-            />
+
         </Tab.Navigator>
     );
 }
