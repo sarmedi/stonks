@@ -56,7 +56,9 @@ function StockPage({ route, navigation }) {
             setWeekMax(Math.max.apply(Math, weekclose));
             setWeekMin(Math.min.apply(Math, weekclose));
             SetLoaded(true);
-        });
+        }).catch(error => {
+            console.log('found error', error)
+          });
     }
     );
     if (!loaded){

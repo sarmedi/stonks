@@ -34,12 +34,12 @@ export default function TutorialScreen() {
 
             <Text>
               {"\n"}
-              {"Stocks are bought and sold on stock markets, which bring together buyers and sellers of publicly traded company shares. Stock markets operate kind of like auctions, where potential buyers name their highest price (“the bid”) and potential sellers name their lowest price (“the ask”). The actual price a trade is executed at is somewhere between the bid and the ask. Trades can be placed by stockbrokers, usually on behalf of portfolio managers or individual investors like you. The stock market in the US is made up of 13 exchanges, the best known are the New York Stock Exchange and Nasdaq."}
+              {"Stocks are bought and sold on stock markets, which bring together buyers and sellers of publicly traded company shares. Stock markets operate kind of like auctions, where potential buyers name their highest price (a.k.a. “the bid”) and potential sellers name their lowest price (“the ask”). The actual price a trade is executed at is somewhere between the bid and the ask. Trades can be placed by stockbrokers, usually on behalf of portfolio managers or individual investors like you. The stock market in the US is made up of 13 exchanges, the best known are the New York Stock Exchange and Nasdaq."}
               {"\n"}
             </Text>
 
             <Text style={styles.codeHighlightContainer}>
-              {"Snapchat-owner Snap Inc. listed its shares publicly on the stock market with its 2016 IPO. Its shares now trade on the New York Stock Exchange with the ticker symbol “SNAP,” and they’re available to buy and sell on the stock market by everyday investors like you."}
+              {"Snapchat-owner Snap Inc. listed its shares publicly on the stock market with its 2016 IPO. Its shares now trade on the New York Stock Exchange with the ticker symbol “SNAP”, and they’re available to buy and sell on the stock market by everyday investors like you."}
             </Text>
 
             <Text style={styles.titleText2}>
@@ -52,7 +52,7 @@ export default function TutorialScreen() {
               {"The world’s stock markets are complex, but are all based upon one simple concept..."} 
             </Text>
 
-             <Text>
+            <Text>
               {"\n"}
               {"Connecting stock buyers with stock sellers to trade under an agreed upon set of rules. This is the key role of every stock market, from New York to Hong Kong."}
               {"\n"}
@@ -69,13 +69,36 @@ export default function TutorialScreen() {
               />
             </View>
 
-            <Text> {"\n"} </Text>
+            <Text style={styles.titleText2}>
+              {"\n"}
+              {"Want to learn more?"}
+              {"\n"}
+            </Text>
+            
+            <View style={{
+                borderStyle: 'dotted',
+                borderWidth: 1,
+                borderRadius: 1,
+                padding: 5,
+              }}>
+              <Text style={{
+                textDecorationLine: 'underline',
+              }}>
+              {"Primary functions of the stock market"}
+              {"\n"}
+              {"\n"}
+              {"How does the stock market work?"}
+              {"\n"}
+              {"\n"}
+              {"What are some rules of the stock market?"}
+              {"\n"}
+              {"\n"}
+              {"Who regulates stock markets?"}
+              </Text>
 
-            <Text numberOfLines={5}>{"some more text"}</Text>
+            </View>
             
-            <Text> {"\n"} </Text>
-            
-            <Text> {"\n"} </Text>
+            <Text> {"\n"} {"\n"} </Text>
 
 
         </ScrollView>
@@ -124,6 +147,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.05)',
     borderRadius: 3,
     paddingHorizontal: 4,
+    padding: 3
   },
   optionText: {
     fontSize: 15,

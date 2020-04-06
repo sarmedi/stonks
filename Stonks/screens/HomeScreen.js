@@ -23,7 +23,8 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
 
-          <Text style={styles_home.titleTextA}>Today's Recommended Stocks</Text>
+          <Text style={styles_home.titleTextA}>{"\n"}{"\n"}Today's Recommended</Text>
+          <Text></Text>
           <Card
             title='AAPL'
             image={require('../assets/images/Apple_gray_logo.png')}>
@@ -31,7 +32,7 @@ export default function HomeScreen() {
     icon={<Icon name='code' color='#ffffff' />}
     buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
     onPress={() => navigation.navigate('Stock Page', {ticker: "AAPL"})}
-    title='VIEW NOW' />
+    title='View' />
           </Card>
           <Card
             title='MSFT'
@@ -40,7 +41,7 @@ export default function HomeScreen() {
     icon={<Icon name='code' color='#ffffff' />}
     buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
     onPress={() => navigation.navigate('Stock Page', {ticker: "MSFT"})}
-    title='VIEW NOW' />
+    title='View' />
           </Card>
           <Card
             title='AMZN'
@@ -49,7 +50,7 @@ export default function HomeScreen() {
     icon={<Icon name='code' color='#ffffff' />}
     buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
     onPress={() => navigation.navigate('Stock Page', {ticker: "AMZN"})}
-    title='VIEW NOW' />
+    title='View' />
           </Card>
         </View>
         
@@ -79,7 +80,7 @@ var styles_home = StyleSheet.create({
     backgroundColor: '#fafafa'              
   },
   titleTextA: {
-    fontSize: 35,
+    fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
     fontStyle: 'italic',
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   welcomeImage: {
-    width: 100,
+    width: 200,
     height: 100,
     resizeMode: 'contain',
     marginTop: 3,
