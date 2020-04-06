@@ -39,7 +39,7 @@ export default class stockPage extends React.Component {
     componentDidMount() {
         
         // Use this URL to request data from our alpha vantage database
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=HRL&apikey=OJZ1MR03G7F21DHM`)
+        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=HRL&apikey=YJR5ZU3OSHN6F0EZ`)
         .then(res => {
           // Update the state of results array
           this.setState({ results: Object.assign({}, res.data) });
