@@ -77,7 +77,7 @@ class Search extends Component {
             
             renderItem={({ item }) => 
               
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Stock Page', {navigation:this.props.navigation, ticker: item.ticker})}>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Stock Page', {ticker: item.ticker})}>
                 
                 <View style={styles.overallList}>
                   <View><Text style={styles.searchticker}>{item.ticker}</Text></View>

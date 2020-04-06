@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { ScrollView } from 'react-native-gesture-handler';
 import {StyleSheet, Text, View, Platform, Dimensions } from "react-native";
 import {
@@ -7,78 +7,63 @@ import {
   } from 'react-native-chart-kit';
 import { useNavigation } from '@react-navigation/native';
 
-
 const labels_=['2020-03-26','2020-03-27','2020-03-30','2020-03-31', '2020-04-01','2020-04-02', '2020-04-03'];
 const formatted_labels = ['03/26','03/27','03/30','03/31', '04/01','04/02', '04/03'];
-
-export default class StockPage extends React.Component {
-    constructor(props) {
-        
-        super(props);
-        this.state = {
-            ticker: "HRL",
-            val: 'Time Series (Daily)',
-            api:'',
-            open: '',
-            close: '',
-            volume: '',
-            high: '',
-            weekclose: [],
-            weekmax: '',
-            weekmin: '',
-            results:[{}],
-            line: {
+function StockPage({ route, navigation }) {
+    const {ticker} = route.params;
+    const [val, setVal] = useState('Time Series (Daily)');
+    const [api, setApi] = useState('');
+    const [open, setOpen] = useState('');
+    const [close, setClose] = useState('');
+    const [volume, setVolume] = useState('');
+    const [weekclose, setWeekClose]=useState([]);
+    const [weekmax, setWeekMax] = useState('');
+    const [weekmin, setWeekMin] = useState('');
+    const [results, setResults] = useState([{}]);
+    const [line, setLine] = useState({
             
-                labels: ['03-26','03-27','03-30','03-31', '04-01','04-02', '04-03'],
-                datasets: [
-                  {
-                    data: [0,0,0,0,0,0,0],
-                    strokeWidth: 2, // optional
-                  },
-                ],
-              }
-        }
-    }
-    
-    componentDidMount() {
-        const ticker = this.props.navigation.getParam('ticker', () => {});
-        // Use this URL to request data from our alpha vantage database
+        labels: ['03-26','03-27','03-30','03-31', '04-01','04-02', '04-03'],
+        datasets: [
+          {
+            data: [0,0,0,0,0,0,0],
+            strokeWidth: 2, // optional
+          },
+        ],
+      });
+    useEffect(() =>{
         axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`)
         .then(res => {
-          // Update the state of results array
-          this.setState({ results: Object.assign({}, res.data) });
-          var data_api = {
-              labels: formatted_labels,
-              datasets: [
-                  {
-                      data: [res.data["Time Series (Daily)"][labels_[0]]["4. close"], res.data["Time Series (Daily)"][labels_[1]]["4. close"],res.data["Time Series (Daily)"][labels_[2]]["4. close"],res.data["Time Series (Daily)"][labels_[3]]["4. close"],res.data["Time Series (Daily)"][labels_[4]]["4. close"],res.data["Time Series (Daily)"][labels_[5]]["4. close"],res.data["Time Series (Daily)"][labels_[6]]["4. close"]],
-                      strokeWidth: 2,
-                  }
-              ]
-          }
-          this.setState({line: Object.assign({}, data_api)});
-          this.setState({close: res.data["Time Series (Daily)"][labels_[6]]["4. close"]});
-          this.setState({open: res.data["Time Series (Daily)"][labels_[6]]["1. open"]});
-          this.setState({high: res.data["Time Series (Daily)"][labels_[6]]["2. high"]});
-          this.setState({volume: res.data["Time Series (Daily)"][labels_[6]]["5. volume"]});
-          this.setState({weekclose: Object.assign([], [Number(res.data["Time Series (Daily)"][labels_[0]]["4. close"]), Number(res.data["Time Series (Daily)"][labels_[1]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[2]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[3]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[4]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[5]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[6]]["4. close"])])})
-          this.setState({weekmax: Math.max.apply(Math, this.state.weekclose)});
-          this.setState({weekmin: Math.min.apply(Math, this.state.weekclose)});
-
-          })
-    }
-
-    render() {
-        return (
-            <ScrollView>
+            // Update the state of results array
+            setResults(res.data);
+            var data_api = {
+                labels: formatted_labels,
+                datasets: [
+                    {
+                        data: [res.data["Time Series (Daily)"][labels_[0]]["4. close"], res.data["Time Series (Daily)"][labels_[1]]["4. close"],res.data["Time Series (Daily)"][labels_[2]]["4. close"],res.data["Time Series (Daily)"][labels_[3]]["4. close"],res.data["Time Series (Daily)"][labels_[4]]["4. close"],res.data["Time Series (Daily)"][labels_[5]]["4. close"],res.data["Time Series (Daily)"][labels_[6]]["4. close"]],
+                        strokeWidth: 2,
+                    }
+                ]
+            }
+            setLine(data_api);
+            setClose(res.data["Time Series (Daily)"][labels_[6]]["4. close"]);
+            setOpen(res.data["Time Series (Daily)"][labels_[6]]["1. open"]);
+            setHigh(res.data["Time Series (Daily)"][labels_[6]]["2. high"]);
+            setVolume(res.data["Time Series (Daily)"][labels_[6]]["5. volume"]);
+            setWeekClose([Number(res.data["Time Series (Daily)"][labels_[0]]["4. close"]), Number(res.data["Time Series (Daily)"][labels_[1]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[2]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[3]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[4]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[5]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[6]]["4. close"])]);
+            setWeekMax(Math.max.apply(Math, weekclose));
+            setWeekMin(Math.min.apply(Math, weekclose));
+        })
+    });
+    return (
+        <ScrollView>
                 <Text style={styles_stock.titleText}>
-                    {this.state.ticker}
+                    {ticker}
                 </Text>
                 <Text style={styles_stock.titleText2}>
-                    Close: {this.state.close}
+                    Close: {close}
                 </Text>
                 <Text style={styles_stock.titleText2}>
-                    Open: {this.state.open}
+                    Open: {open}
                 </Text>
                 <Text style={styles_stock.titleText2}>
                 </Text>
@@ -86,7 +71,7 @@ export default class StockPage extends React.Component {
                     Past Week:
                 </Text>
                 <LineChart
-                    data={this.state.line}
+                    data={line}
                     width={Dimensions.get('window').width} // from react-native
                     height={220}
                     yAxisLabel={'$'}
@@ -115,21 +100,20 @@ export default class StockPage extends React.Component {
                 
                 <Text style={styles_stock.titleText2_}>
 
-                    Volume: {Number(this.state.volume).toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
+                    Volume: {Number(volume).toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
                 </Text>
                 <Text style={styles_stock.titleText2_}>
 
-                    7 Day Max: {this.state.weekmax}
+                    7 Day Max: {weekmax}
                 </Text>
                 <Text style={styles_stock.titleText2_}>
 
-                    7 Day Min: {this.state.weekmin}
+                    7 Day Min: {weekmin}
                 </Text>
             </ScrollView>
-            );
-    }
-}
-
+    );
+    
+} export default StockPage
 var styles_stock = StyleSheet.create({
     titleText: {
       fontSize: 50,
@@ -155,3 +139,4 @@ var styles_stock = StyleSheet.create({
       backgroundColor: '#fafafa'              
     }
   })
+
