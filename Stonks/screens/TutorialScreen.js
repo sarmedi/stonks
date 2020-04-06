@@ -71,7 +71,7 @@ export default function TutorialScreen() {
 
             <Text> {"\n"} </Text>
 
-            <Text numberOfLines={5}>{"some more text"}</Text>
+            
             
             <Text> {"\n"} </Text>
             
