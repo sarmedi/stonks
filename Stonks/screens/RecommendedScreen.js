@@ -17,7 +17,7 @@ export default function myTabs() {
             initialRouteName ="Beginner"
             tabBarOptions={{
                 activeTintColor: '#000',
-                labelStyle: {fontSize: 16},
+                labelStyle: {fontSize: 14},
                 style: {
                     backgroundColor: '#fafafa'
                 },
