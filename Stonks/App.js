@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
+import StockPage from './screens/recommendedScreens/stockScreen';
 
 const Stack = createStackNavigator();
 
@@ -52,6 +53,7 @@ export default function App(props) {
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
             <Stack.Screen name=" " component={BottomTabNavigator} />
+            <Stack.Screen name="Stock Page" component={StockPage} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

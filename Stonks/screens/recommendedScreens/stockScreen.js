@@ -5,12 +5,15 @@ import {StyleSheet, Text, View, Platform, Dimensions } from "react-native";
 import {
     LineChart,
   } from 'react-native-chart-kit';
+import { useNavigation } from '@react-navigation/native';
 
 
 const labels_=['2020-03-26','2020-03-27','2020-03-30','2020-03-31', '2020-04-01','2020-04-02', '2020-04-03'];
 const formatted_labels = ['03/26','03/27','03/30','03/31', '04/01','04/02', '04/03'];
-export default class stockPage extends React.Component {
+
+export default class StockPage extends React.Component {
     constructor(props) {
+        
         super(props);
         this.state = {
             ticker: "HRL",
@@ -36,10 +39,11 @@ export default class stockPage extends React.Component {
               }
         }
     }
+    
     componentDidMount() {
-        
+        const ticker = this.props.navigation.getParam('ticker', () => {});
         // Use this URL to request data from our alpha vantage database
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=HRL&apikey=YJR5ZU3OSHN6F0EZ`)
+        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`)
         .then(res => {
           // Update the state of results array
           this.setState({ results: Object.assign({}, res.data) });

@@ -47,9 +47,7 @@ class Search extends Component {
   }
 
   // WHERE TO LINK TO THE CURRENT PAGE
-  onPressStock() {
-    alert('You tapped the button!');
-  }
+
 
   render () {
     const { search } = this.state;
@@ -69,14 +67,18 @@ class Search extends Component {
           onClear={this.clearAll}
         />
         {/* Show icon on search homepage */}
-        {/* <View style={styles.imageBox}>
+        {/*<View style={styles.imageBox}>
           <Image source={require('../assets/images/search-money-icon.png')} style={styles.actualImage} />
-        </View> */}
+    </View> */}
         <View style={styles.resultList}> 
           <FlatList 
+            
             data={this.state.results}
+            
             renderItem={({ item }) => 
-              <TouchableHighlight onPress={this.onPressStock}>
+              
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Stock Page', {navigation:this.props.navigation, ticker: item.ticker})}>
+                
                 <View style={styles.overallList}>
                   <View><Text style={styles.searchticker}>{item.ticker}</Text></View>
                   <View><Text style={styles.searchName}>{item.name}</Text></View>
