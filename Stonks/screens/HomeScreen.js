@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Dimensions, } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import * as WebBrowser from 'expo-web-browser';
-
-import { MonoText } from '../components/StyledText';
+import {Card, Button, Icon  }from 'react-native-elements';
+import { useNavigation } from '@react-navigation/native';
 
 export default function HomeScreen() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -13,15 +13,9 @@ export default function HomeScreen() {
         <View style={styles.getStartedContainer}>
 
           <Text style={styles_home.titleText}>$tonks</Text>
-
-        </View>
-
-        <View style={styles.welcomeContainer}>
           <Image
             source={
-              __DEV__
-                ? require('../assets/images/app_icon.png')
-                : require('../assets/images/app_icon.png')
+               require('../assets/images/app_icon.png')
             }
             style={styles.welcomeImage}
           />
@@ -29,14 +23,37 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
 
-          <Text style={styles_home.titleText2}>{"\n"}{"\n"}Today's Recommended Stocks</Text>
-
-          <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText> AAPL </MonoText>
-            <MonoText> MSFT </MonoText>
-            <MonoText> AMZN </MonoText>
-          </View>
+          <Text style={styles_home.titleTextA}>{"\n"}{"\n"}Today's Recommended Stocks</Text>
+          <Text></Text>
+          <Card
+            title='AAPL'
+            image={require('../assets/images/Apple_gray_logo.png')}>
+            <Button
+    icon={<Icon name='code' color='#ffffff' />}
+    buttonStyle={{borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+    onPress={() => navigation.navigate('Stock Page', {ticker: "AAPL"})}
+    title='VIEW NOW' />
+          </Card>
+          <Card
+            title='MSFT'
+            image={require('../assets/images/msft_logo_crop.jpg')}>
+            <Button
+    icon={<Icon name='code' color='#ffffff' />}
+    buttonStyle={{borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+    onPress={() => navigation.navigate('Stock Page', {ticker: "MSFT"})}
+    title='VIEW NOW' />
+          </Card>
+          <Card
+            title='AMZN'
+            image={require('../assets/images/amazon-logo-square.png')}>
+            <Button
+    icon={<Icon name='code' color='#ffffff' />}
+    buttonStyle={{borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+    onPress={() => navigation.navigate('Stock Page', {ticker: "AMZN"})}
+    title='VIEW NOW' />
+          </Card>
         </View>
+        
 
       </ScrollView>
     </View>
@@ -47,54 +64,35 @@ var styles_home = StyleSheet.create({
   titleText: {
     fontSize: 50,
     fontWeight: 'bold',
+
   },
   titleText2: {
-    fontSize: 15,
+    fontSize: 40,
     fontWeight: 'bold',
+
+  },
+  titleText3: {
+    fontSize: 35,
+    fontWeight: 'bold',
+    
   },
   homePage: {
     backgroundColor: '#fafafa'              
-  }
+  },
+  titleTextA: {
+    fontSize: 35,
+    fontWeight: 'bold',
+    textAlign: 'left'
+    
+  },
 })
 
 HomeScreen.navigationOptions = {
   header: null,
 };
-/*
-Commented out for reference when writing code, not actually used.
-function DevelopmentModeNotice() {
-  if (__DEV__) {
-    const learnMoreButton = (
-      <Text onPress={handleLearnMorePress} style={styles.helpLinkText}>
-        Learn more
-      </Text>
-    );
+const labels_=['2020-03-26','2020-03-27','2020-03-30','2020-03-31', '2020-04-01','2020-04-02', '2020-04-03'];
+const formatted_labels = ['03/26','03/27','03/30','03/31', '04/01','04/02', '04/03'];
 
-    return (
-      <Text style={styles.developmentModeText}>
-        Development mode is enabled: your app will be slower but you can use useful development
-        tools. {learnMoreButton}
-      </Text>
-    );
-  } else {
-    return (
-      <Text style={styles.developmentModeText}>
-        You are not in development mode: your app will run at full speed.
-      </Text>
-    );
-  }
-}
-
-function handleLearnMorePress() {
-  WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/workflow/development-mode/');
-}
-
-function handleHelpPress() {
-  WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/get-started/create-a-new-app/#making-your-first-change'
-  );
-}
-*/
 const styles = StyleSheet.create({
   container: {
     flex: 1,

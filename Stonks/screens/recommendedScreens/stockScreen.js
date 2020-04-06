@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { Component, useState, useEffect } from "react";
 import { ScrollView } from 'react-native-gesture-handler';
-import {StyleSheet, Text, View, Platform, Dimensions } from "react-native";
+import {StyleSheet, Text, View, Platform, Dimensions, ActivityIndicator } from "react-native";
+
 import {
     LineChart,
   } from 'react-native-chart-kit';
@@ -14,6 +15,7 @@ function StockPage({ route, navigation }) {
     const [val, setVal] = useState('Time Series (Daily)');
     const [api, setApi] = useState('');
     const [open, setOpen] = useState('');
+    const [high, setHigh] = useState('');
     const [close, setClose] = useState('');
     const [volume, setVolume] = useState('');
     const [weekclose, setWeekClose]=useState([]);
@@ -30,88 +32,91 @@ function StockPage({ route, navigation }) {
           },
         ],
       });
+    const [loaded, SetLoaded] =useState(false);
     useEffect(() =>{
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`)
-        .then(res => {
+        fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`).then(res => res.json())
+        .then((result_) => {
             // Update the state of results array
-            setResults(res.data);
+            setResults(result_);
             var data_api = {
                 labels: formatted_labels,
                 datasets: [
                     {
-                        data: [res.data["Time Series (Daily)"][labels_[0]]["4. close"], res.data["Time Series (Daily)"][labels_[1]]["4. close"],res.data["Time Series (Daily)"][labels_[2]]["4. close"],res.data["Time Series (Daily)"][labels_[3]]["4. close"],res.data["Time Series (Daily)"][labels_[4]]["4. close"],res.data["Time Series (Daily)"][labels_[5]]["4. close"],res.data["Time Series (Daily)"][labels_[6]]["4. close"]],
+                        data: [result_["Time Series (Daily)"][labels_[0]]["4. close"], result_["Time Series (Daily)"][labels_[1]]["4. close"],result_["Time Series (Daily)"][labels_[2]]["4. close"],result_["Time Series (Daily)"][labels_[3]]["4. close"],result_["Time Series (Daily)"][labels_[4]]["4. close"],result_["Time Series (Daily)"][labels_[5]]["4. close"],result_["Time Series (Daily)"][labels_[6]]["4. close"]],
                         strokeWidth: 2,
                     }
                 ]
             }
             setLine(data_api);
-            setClose(res.data["Time Series (Daily)"][labels_[6]]["4. close"]);
-            setOpen(res.data["Time Series (Daily)"][labels_[6]]["1. open"]);
-            setHigh(res.data["Time Series (Daily)"][labels_[6]]["2. high"]);
-            setVolume(res.data["Time Series (Daily)"][labels_[6]]["5. volume"]);
-            setWeekClose([Number(res.data["Time Series (Daily)"][labels_[0]]["4. close"]), Number(res.data["Time Series (Daily)"][labels_[1]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[2]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[3]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[4]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[5]]["4. close"]),Number(res.data["Time Series (Daily)"][labels_[6]]["4. close"])]);
+            setClose(result_["Time Series (Daily)"][labels_[6]]["4. close"]);
+            setOpen(result_["Time Series (Daily)"][labels_[6]]["1. open"]);
+            setHigh(result_["Time Series (Daily)"][labels_[6]]["2. high"]);
+            setVolume(result_["Time Series (Daily)"][labels_[6]]["5. volume"]);
+            setWeekClose([Number(result_["Time Series (Daily)"][labels_[0]]["4. close"]), Number(result_["Time Series (Daily)"][labels_[1]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[2]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[3]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[4]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[5]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[6]]["4. close"])]);
             setWeekMax(Math.max.apply(Math, weekclose));
             setWeekMin(Math.min.apply(Math, weekclose));
-        })
-    });
-    return (
-        <ScrollView>
-                <Text style={styles_stock.titleText}>
-                    {ticker}
-                </Text>
-                <Text style={styles_stock.titleText2}>
-                    Close: {close}
-                </Text>
-                <Text style={styles_stock.titleText2}>
-                    Open: {open}
-                </Text>
-                <Text style={styles_stock.titleText2}>
-                </Text>
-                <Text style={styles_stock.titleText2}>
-                    Past Week:
-                </Text>
-                <LineChart
-                    data={line}
-                    width={Dimensions.get('window').width} // from react-native
-                    height={220}
-                    yAxisLabel={'$'}
-                    chartConfig={{
-                    backgroundColor: '#e26a00',
-                    backgroundGradientFrom: '#fb8c00',
-                    backgroundGradientTo: '#ffa726',
-                    decimalPlaces: 2, // optional, defaults to 2dp
-                    color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-                    style: {
-                        borderRadius: 16
-                    }
-                    }}
-                    bezier
-                    style={{
-                    marginVertical: 8,
-                    borderRadius: 16
-                    }}
-                />
-                <Text style={styles_stock.titleText2_}></Text>
-                <Text style={styles_stock.titleText3}>
-                    Key Information [{formatted_labels[6]}]:
-                </Text>
-                <Text style={styles_stock.titleText2}>
-                </Text>
-                
-                <Text style={styles_stock.titleText2_}>
-
-                    Volume: {Number(volume).toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
-                </Text>
-                <Text style={styles_stock.titleText2_}>
-
-                    7 Day Max: {weekmax}
-                </Text>
-                <Text style={styles_stock.titleText2_}>
-
-                    7 Day Min: {weekmin}
-                </Text>
-            </ScrollView>
+            SetLoaded(true);
+        });
+    }
     );
+    if (!loaded){
+        return (
+            <ActivityIndicator size="large" color="#1A741D" />
+        );
+    }else{
+        return (
+            <ScrollView>
+                    <Text style={styles_stock.titleText}>
+                        {ticker}
+                    </Text>
+                    <Text style={styles_stock.titleText2}>
+                        Close: {close}
+                    </Text>
+                    <Text style={styles_stock.titleText2}>
+                        Open: {open}
+                    </Text>
+                    <Text style={styles_stock.titleText2}>
+                    </Text>
+                    <Text style={styles_stock.titleText2}>
+                        Past Week:
+                    </Text>
+                    <LineChart
+                        data={line}
+                        width={Dimensions.get('window').width} // from react-native
+                        height={220}
+                        yAxisLabel={'$'}
+                        chartConfig={{
+                        backgroundColor: '#e26a00',
+                        backgroundGradientFrom: '#fb8c00',
+                        backgroundGradientTo: '#ffa726',
+                        decimalPlaces: 2, // optional, defaults to 2dp
+                        color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                        style: {
+                            borderRadius: 16
+                        }
+                        }}
+                        bezier
+                        style={{
+                        marginVertical: 8,
+                        borderRadius: 16
+                        }}
+                    />
+                    <Text style={styles_stock.titleText2_}></Text>
+                    <Text style={styles_stock.titleText3}>
+                        Key Information [{formatted_labels[6]}]:
+                    </Text>
+                    <Text style={styles_stock.titleText2}>
+                    </Text>
+                    
+                    <Text style={styles_stock.titleText2_}>
+    
+                        Volume: {Number(volume).toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
+                    </Text>
+                    
+                </ScrollView>
+        );
+    }
+    
     
 } export default StockPage
 var styles_stock = StyleSheet.create({
