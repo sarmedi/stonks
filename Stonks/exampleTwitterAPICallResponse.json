@@ -1,0 +1,2987 @@
+{
+  "statuses": [
+    {
+      "created_at": "Wed Apr 15 19:12:25 +0000 2020",
+      "id": 1250502253187870700,
+      "id_str": "1250502253187870723",
+      "text": "RT @MicrosoftTeams: As an IT professtional, you may be getting a lot questions about video conferencing, privacy, and security. Explore our…",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "MicrosoftTeams",
+            "name": "Microsoft Teams",
+            "id": 817461289081409500,
+            "id_str": "817461289081409536",
+            "indices": [
+              3,
+              18
+            ]
+          }
+        ],
+        "urls": []
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 213364197,
+        "id_str": "213364197",
+        "name": "Tichaona Chitsinde",
+        "screen_name": "TiChitsinde",
+        "location": "Africa",
+        "description": "Fighting systemic barriers》Governance Risk & Compliance》Conduct Risk & ESG》Delivers Like DHL》Fintech & Regtech》Farmer\n\n#UngwaruConsulting #TwimboTravelClub",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 5376,
+        "friends_count": 1008,
+        "listed_count": 117,
+        "created_at": "Mon Nov 08 18:44:05 +0000 2010",
+        "favourites_count": 981,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 268229,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1226143329315893248/4ZcnBHJg_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1226143329315893248/4ZcnBHJg_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/213364197/1581170325",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweeted_status": {
+        "created_at": "Wed Apr 15 19:05:00 +0000 2020",
+        "id": 1250500388173856800,
+        "id_str": "1250500388173856769",
+        "text": "As an IT professtional, you may be getting a lot questions about video conferencing, privacy, and security. Explore… https://t.co/XNSz4DTntm",
+        "truncated": true,
+        "entities": {
+          "hashtags": [],
+          "symbols": [],
+          "user_mentions": [],
+          "urls": [
+            {
+              "url": "https://t.co/XNSz4DTntm",
+              "expanded_url": "https://twitter.com/i/web/status/1250500388173856769",
+              "display_url": "twitter.com/i/web/status/1…",
+              "indices": [
+                117,
+                140
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://prod1.sprinklr.com\" rel=\"nofollow\">Sprinklr Publishing</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 817461289081409500,
+          "id_str": "817461289081409536",
+          "name": "Microsoft Teams",
+          "screen_name": "MicrosoftTeams",
+          "location": "",
+          "description": "Bring together all of your team’s conversations, files, and tools in a single workspace with Microsoft Teams in Office 365.",
+          "url": "https://t.co/9Yr5Kd5jsy",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "https://t.co/9Yr5Kd5jsy",
+                  "expanded_url": "https://aka.ms/MicrosoftTeamsBio",
+                  "display_url": "aka.ms/MicrosoftTeams…",
+                  "indices": [
+                    0,
+                    23
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 137888,
+          "friends_count": 262,
+          "listed_count": 1092,
+          "created_at": "Fri Jan 06 20:02:13 +0000 2017",
+          "favourites_count": 9797,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": true,
+          "statuses_count": 14354,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "F5F8FA",
+          "profile_background_image_url": null,
+          "profile_background_image_url_https": null,
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1128330992328921090/nVNqd5QP_normal.png",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1128330992328921090/nVNqd5QP_normal.png",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/817461289081409536/1496693898",
+          "profile_link_color": "1DA1F2",
+          "profile_sidebar_border_color": "C0DEED",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": true,
+          "has_extended_profile": false,
+          "default_profile": true,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 7,
+        "favorite_count": 10,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      },
+      "is_quote_status": false,
+      "retweet_count": 7,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:12:01 +0000 2020",
+      "id": 1250502155406114800,
+      "id_str": "1250502155406114817",
+      "text": "Xamarin &amp; #XamarinForms deliver beautiful performant cross-platform apps using all the power of the #dotNET platfor… https://t.co/d257jPAprG",
+      "truncated": true,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "XamarinForms",
+            "indices": [
+              14,
+              27
+            ]
+          },
+          {
+            "text": "dotNET",
+            "indices": [
+              104,
+              111
+            ]
+          }
+        ],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [
+          {
+            "url": "https://t.co/d257jPAprG",
+            "expanded_url": "https://twitter.com/i/web/status/1250502155406114817",
+            "display_url": "twitter.com/i/web/status/1…",
+            "indices": [
+              121,
+              144
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"https://prod1.sprinklr.com\" rel=\"nofollow\">Sprinklr Publishing</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 299659914,
+        "id_str": "299659914",
+        "name": "Xamarin",
+        "screen_name": "xamarinhq",
+        "location": "",
+        "description": "Build beautiful iOS, Android, Mac and Windows apps in C# and .NET with Xamarin.",
+        "url": "http://t.co/iLyxWYx3QJ",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/iLyxWYx3QJ",
+                "expanded_url": "http://xamarin.com",
+                "display_url": "xamarin.com",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 70803,
+        "friends_count": 442,
+        "listed_count": 1270,
+        "created_at": "Mon May 16 13:44:36 +0000 2011",
+        "favourites_count": 16410,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 6228,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/471641515756769282/RDXWoY7W_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/471641515756769282/RDXWoY7W_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/299659914/1401283128",
+        "profile_link_color": "117CAD",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "EEEEEE",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:11:56 +0000 2020",
+      "id": 1250502132631064600,
+      "id_str": "1250502132631064579",
+      "text": "$MSFT $AMZN JEDI contract https://t.co/TFnkZxmtrs",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [
+          {
+            "text": "MSFT",
+            "indices": [
+              0,
+              5
+            ]
+          },
+          {
+            "text": "AMZN",
+            "indices": [
+              6,
+              11
+            ]
+          }
+        ],
+        "user_mentions": [],
+        "urls": [
+          {
+            "url": "https://t.co/TFnkZxmtrs",
+            "expanded_url": "https://slashdot.org/story/20/04/15/1615211/pentagon-watchdog-clears-microsofts-10-billion-win-over-amazon",
+            "display_url": "slashdot.org/story/20/04/15…",
+            "indices": [
+              26,
+              49
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 727043877216108500,
+        "id_str": "727043877216108544",
+        "name": "E V A T R O N I C",
+        "screen_name": "3vatronic",
+        "location": "London, UK",
+        "description": "Fitness | Day Trader | Digital Artist 💪🏼🌴📊✈️\nDocumenting my journey",
+        "url": "https://t.co/2wRnhhgJ38",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "https://t.co/2wRnhhgJ38",
+                "expanded_url": "https://linktr.ee/3vatronic/",
+                "display_url": "linktr.ee/3vatronic/",
+                "indices": [
+                  0,
+                  23
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 137,
+        "friends_count": 396,
+        "listed_count": 3,
+        "created_at": "Mon May 02 07:55:42 +0000 2016",
+        "favourites_count": 1164,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 401,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/947872270151806976/KD4YeZWE_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/947872270151806976/KD4YeZWE_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/727043877216108544/1514825318",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:11:49 +0000 2020",
+      "id": 1250502102650101800,
+      "id_str": "1250502102650101761",
+      "text": "RT @MicrosoftTeams: As an IT professtional, you may be getting a lot questions about video conferencing, privacy, and security. Explore our…",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "MicrosoftTeams",
+            "name": "Microsoft Teams",
+            "id": 817461289081409500,
+            "id_str": "817461289081409536",
+            "indices": [
+              3,
+              18
+            ]
+          }
+        ],
+        "urls": []
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 1455111241,
+        "id_str": "1455111241",
+        "name": "Black March | MBS",
+        "screen_name": "FREEDOM_005",
+        "location": "Riyadh, Kingdom of Saudi Arabia",
+        "description": "الحياد فضيلة عندما تكون المعركة بين شر و شر | و رذيلة عندما تكون بين حق وباطل | اعمل بمجال تطوير أنظمة الاتصالات وامن المعلومات | مهتم في السياسة والقانون",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 20136,
+        "friends_count": 2529,
+        "listed_count": 10,
+        "created_at": "Fri May 24 19:51:44 +0000 2013",
+        "favourites_count": 4829,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 69023,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "352726",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme5/bg.gif",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme5/bg.gif",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1238206480194682890/byfwwHYB_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1238206480194682890/byfwwHYB_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1455111241/1576230403",
+        "profile_link_color": "D02B55",
+        "profile_sidebar_border_color": "829D5E",
+        "profile_sidebar_fill_color": "99CC33",
+        "profile_text_color": "3E4415",
+        "profile_use_background_image": true,
+        "has_extended_profile": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweeted_status": {
+        "created_at": "Wed Apr 15 19:05:00 +0000 2020",
+        "id": 1250500388173856800,
+        "id_str": "1250500388173856769",
+        "text": "As an IT professtional, you may be getting a lot questions about video conferencing, privacy, and security. Explore… https://t.co/XNSz4DTntm",
+        "truncated": true,
+        "entities": {
+          "hashtags": [],
+          "symbols": [],
+          "user_mentions": [],
+          "urls": [
+            {
+              "url": "https://t.co/XNSz4DTntm",
+              "expanded_url": "https://twitter.com/i/web/status/1250500388173856769",
+              "display_url": "twitter.com/i/web/status/1…",
+              "indices": [
+                117,
+                140
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://prod1.sprinklr.com\" rel=\"nofollow\">Sprinklr Publishing</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 817461289081409500,
+          "id_str": "817461289081409536",
+          "name": "Microsoft Teams",
+          "screen_name": "MicrosoftTeams",
+          "location": "",
+          "description": "Bring together all of your team’s conversations, files, and tools in a single workspace with Microsoft Teams in Office 365.",
+          "url": "https://t.co/9Yr5Kd5jsy",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "https://t.co/9Yr5Kd5jsy",
+                  "expanded_url": "https://aka.ms/MicrosoftTeamsBio",
+                  "display_url": "aka.ms/MicrosoftTeams…",
+                  "indices": [
+                    0,
+                    23
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 137888,
+          "friends_count": 262,
+          "listed_count": 1092,
+          "created_at": "Fri Jan 06 20:02:13 +0000 2017",
+          "favourites_count": 9797,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": true,
+          "statuses_count": 14354,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "F5F8FA",
+          "profile_background_image_url": null,
+          "profile_background_image_url_https": null,
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1128330992328921090/nVNqd5QP_normal.png",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1128330992328921090/nVNqd5QP_normal.png",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/817461289081409536/1496693898",
+          "profile_link_color": "1DA1F2",
+          "profile_sidebar_border_color": "C0DEED",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": true,
+          "has_extended_profile": false,
+          "default_profile": true,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 7,
+        "favorite_count": 10,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      },
+      "is_quote_status": false,
+      "retweet_count": 7,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:11:31 +0000 2020",
+      "id": 1250502027441995800,
+      "id_str": "1250502027441995777",
+      "text": "That Alcohol Decision Was For Dine In Only &amp; Dine In Is Dead? \n\n$aapl $amzn $agn $brk $bhc $ba $cat $f $ge $gm $hlf… https://t.co/oAneB8WNnB",
+      "truncated": true,
+      "entities": {
+        "hashtags": [],
+        "symbols": [
+          {
+            "text": "aapl",
+            "indices": [
+              68,
+              73
+            ]
+          },
+          {
+            "text": "amzn",
+            "indices": [
+              74,
+              79
+            ]
+          },
+          {
+            "text": "agn",
+            "indices": [
+              80,
+              84
+            ]
+          },
+          {
+            "text": "brk",
+            "indices": [
+              85,
+              89
+            ]
+          },
+          {
+            "text": "bhc",
+            "indices": [
+              90,
+              94
+            ]
+          },
+          {
+            "text": "ba",
+            "indices": [
+              95,
+              98
+            ]
+          },
+          {
+            "text": "cat",
+            "indices": [
+              99,
+              103
+            ]
+          },
+          {
+            "text": "f",
+            "indices": [
+              104,
+              106
+            ]
+          },
+          {
+            "text": "ge",
+            "indices": [
+              107,
+              110
+            ]
+          },
+          {
+            "text": "gm",
+            "indices": [
+              111,
+              114
+            ]
+          },
+          {
+            "text": "hlf",
+            "indices": [
+              115,
+              119
+            ]
+          }
+        ],
+        "user_mentions": [],
+        "urls": [
+          {
+            "url": "https://t.co/oAneB8WNnB",
+            "expanded_url": "https://twitter.com/i/web/status/1250502027441995777",
+            "display_url": "twitter.com/i/web/status/1…",
+            "indices": [
+              121,
+              144
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 211010957,
+        "id_str": "211010957",
+        "name": "Brian Firestone",
+        "screen_name": "IliketotweettoU",
+        "location": "",
+        "description": "Alternative Profile For Main Profile @brianfires . What goes for @brianfires applies to this profile too. Don't Be Stupid. Be Conscientious!",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 94,
+        "friends_count": 257,
+        "listed_count": 6,
+        "created_at": "Tue Nov 02 01:40:32 +0000 2010",
+        "favourites_count": 169,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 1042,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/839951945364287488/Td3hgYbJ_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/839951945364287488/Td3hgYbJ_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/211010957/1485519791",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": true,
+      "quoted_status_id": 1250501605851648000,
+      "quoted_status_id_str": "1250501605851648000",
+      "quoted_status": {
+        "created_at": "Wed Apr 15 19:09:50 +0000 2020",
+        "id": 1250501605851648000,
+        "id_str": "1250501605851648000",
+        "text": "And Then We're Gonna Tell Everyone We Have Long Car Lines \nFor Our F&amp;B? \n\n$aapl $amzn $agn $brk $bhc $ba $cat $f… https://t.co/TpIyOUEm2u",
+        "truncated": true,
+        "entities": {
+          "hashtags": [],
+          "symbols": [
+            {
+              "text": "aapl",
+              "indices": [
+                78,
+                83
+              ]
+            },
+            {
+              "text": "amzn",
+              "indices": [
+                84,
+                89
+              ]
+            },
+            {
+              "text": "agn",
+              "indices": [
+                90,
+                94
+              ]
+            },
+            {
+              "text": "brk",
+              "indices": [
+                95,
+                99
+              ]
+            },
+            {
+              "text": "bhc",
+              "indices": [
+                100,
+                104
+              ]
+            },
+            {
+              "text": "ba",
+              "indices": [
+                105,
+                108
+              ]
+            },
+            {
+              "text": "cat",
+              "indices": [
+                109,
+                113
+              ]
+            },
+            {
+              "text": "f",
+              "indices": [
+                114,
+                116
+              ]
+            }
+          ],
+          "user_mentions": [],
+          "urls": [
+            {
+              "url": "https://t.co/TpIyOUEm2u",
+              "expanded_url": "https://twitter.com/i/web/status/1250501605851648000",
+              "display_url": "twitter.com/i/web/status/1…",
+              "indices": [
+                118,
+                141
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 211010957,
+          "id_str": "211010957",
+          "name": "Brian Firestone",
+          "screen_name": "IliketotweettoU",
+          "location": "",
+          "description": "Alternative Profile For Main Profile @brianfires . What goes for @brianfires applies to this profile too. Don't Be Stupid. Be Conscientious!",
+          "url": null,
+          "entities": {
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 94,
+          "friends_count": 257,
+          "listed_count": 6,
+          "created_at": "Tue Nov 02 01:40:32 +0000 2010",
+          "favourites_count": 169,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": false,
+          "statuses_count": 1042,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "C0DEED",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/839951945364287488/Td3hgYbJ_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/839951945364287488/Td3hgYbJ_normal.jpg",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/211010957/1485519791",
+          "profile_link_color": "1DA1F2",
+          "profile_sidebar_border_color": "C0DEED",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": true,
+          "has_extended_profile": false,
+          "default_profile": true,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": true,
+        "quoted_status_id": 1250500376534700000,
+        "quoted_status_id_str": "1250500376534700033",
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      },
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:11:27 +0000 2020",
+      "id": 1250502013294608400,
+      "id_str": "1250502013294608392",
+      "text": "I miss my birth control skin ✌🏽😔✌🏽",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": []
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 1172421352067756000,
+        "id_str": "1172421352067756032",
+        "name": "☿Mercury’s Child☿",
+        "screen_name": "earthbound_msft",
+        "location": "Venus",
+        "description": "Hazy were the visions overplayed 🌾she/her✨ ☉♍︎☾♍︎⇡♎︎ ♀♎︎",
+        "url": "https://t.co/6gqSgVPi91",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "https://t.co/6gqSgVPi91",
+                "expanded_url": "https://instagram.com/mercuryslastdance?r=nametag",
+                "display_url": "instagram.com/mercuryslastda…",
+                "indices": [
+                  0,
+                  23
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 41,
+        "friends_count": 142,
+        "listed_count": 0,
+        "created_at": "Fri Sep 13 08:07:02 +0000 2019",
+        "favourites_count": 2245,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 2565,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1250466654850613251/Rqugg5-T_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1250466654850613251/Rqugg5-T_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1172421352067756032/1585853312",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:11:17 +0000 2020",
+      "id": 1250501968084316200,
+      "id_str": "1250501968084316160",
+      "text": "RT @MicrosoftTeams: As an IT professtional, you may be getting a lot questions about video conferencing, privacy, and security. Explore our…",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "MicrosoftTeams",
+            "name": "Microsoft Teams",
+            "id": 817461289081409500,
+            "id_str": "817461289081409536",
+            "indices": [
+              3,
+              18
+            ]
+          }
+        ],
+        "urls": []
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"https://twitter.com/msteamstips\" rel=\"nofollow\">Microsoft Teams aggregator</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 918996148588810200,
+        "id_str": "918996148588810240",
+        "name": "Teams Tips",
+        "screen_name": "msteamstips",
+        "location": "",
+        "description": "Aggregator for tips, tricks, and useful info about #MicrosoftTeams, run by MVP @PatRichard",
+        "url": "https://t.co/72X1ER5mAq",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "https://t.co/72X1ER5mAq",
+                "expanded_url": "https://ucunleashed.com",
+                "display_url": "ucunleashed.com",
+                "indices": [
+                  0,
+                  23
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1051,
+        "friends_count": 1,
+        "listed_count": 17,
+        "created_at": "Sat Oct 14 00:25:30 +0000 2017",
+        "favourites_count": 47,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 5775,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/918998441971220480/rRIsJE-H_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/918998441971220480/rRIsJE-H_normal.jpg",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweeted_status": {
+        "created_at": "Wed Apr 15 19:05:00 +0000 2020",
+        "id": 1250500388173856800,
+        "id_str": "1250500388173856769",
+        "text": "As an IT professtional, you may be getting a lot questions about video conferencing, privacy, and security. Explore… https://t.co/XNSz4DTntm",
+        "truncated": true,
+        "entities": {
+          "hashtags": [],
+          "symbols": [],
+          "user_mentions": [],
+          "urls": [
+            {
+              "url": "https://t.co/XNSz4DTntm",
+              "expanded_url": "https://twitter.com/i/web/status/1250500388173856769",
+              "display_url": "twitter.com/i/web/status/1…",
+              "indices": [
+                117,
+                140
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://prod1.sprinklr.com\" rel=\"nofollow\">Sprinklr Publishing</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 817461289081409500,
+          "id_str": "817461289081409536",
+          "name": "Microsoft Teams",
+          "screen_name": "MicrosoftTeams",
+          "location": "",
+          "description": "Bring together all of your team’s conversations, files, and tools in a single workspace with Microsoft Teams in Office 365.",
+          "url": "https://t.co/9Yr5Kd5jsy",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "https://t.co/9Yr5Kd5jsy",
+                  "expanded_url": "https://aka.ms/MicrosoftTeamsBio",
+                  "display_url": "aka.ms/MicrosoftTeams…",
+                  "indices": [
+                    0,
+                    23
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 137888,
+          "friends_count": 262,
+          "listed_count": 1092,
+          "created_at": "Fri Jan 06 20:02:13 +0000 2017",
+          "favourites_count": 9797,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": true,
+          "statuses_count": 14354,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "F5F8FA",
+          "profile_background_image_url": null,
+          "profile_background_image_url_https": null,
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1128330992328921090/nVNqd5QP_normal.png",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1128330992328921090/nVNqd5QP_normal.png",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/817461289081409536/1496693898",
+          "profile_link_color": "1DA1F2",
+          "profile_sidebar_border_color": "C0DEED",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": true,
+          "has_extended_profile": false,
+          "default_profile": true,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 7,
+        "favorite_count": 10,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      },
+      "is_quote_status": false,
+      "retweet_count": 7,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:11:07 +0000 2020",
+      "id": 1250501928947273700,
+      "id_str": "1250501928947273729",
+      "text": "RT @PlunderAndFeast: New Art: The Great Stock Wave of 2020 (3 of 7)\n\nInspired by The Great Wave by Katsushika Hokusai\n\nReal stock charts us…",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "PlunderAndFeast",
+            "name": "Matt 💰⚔️⛓",
+            "id": 810293934198923300,
+            "id_str": "810293934198923264",
+            "indices": [
+              3,
+              19
+            ]
+          }
+        ],
+        "urls": []
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 1235225464278573000,
+        "id_str": "1235225464278573056",
+        "name": "Andrey Bogomolov",
+        "screen_name": "AndreyGodsonn",
+        "location": "",
+        "description": "Sudo Guru",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 50,
+        "friends_count": 203,
+        "listed_count": 1,
+        "created_at": "Wed Mar 04 15:28:22 +0000 2020",
+        "favourites_count": 1300,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 935,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1235226135891496961/Xso3VHnr_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1235226135891496961/Xso3VHnr_normal.jpg",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweeted_status": {
+        "created_at": "Wed Apr 15 18:58:46 +0000 2020",
+        "id": 1250498820473081900,
+        "id_str": "1250498820473081859",
+        "text": "New Art: The Great Stock Wave of 2020 (3 of 7)\n\nInspired by The Great Wave by Katsushika Hokusai\n\nReal stock charts… https://t.co/tSpKofd13W",
+        "truncated": true,
+        "entities": {
+          "hashtags": [],
+          "symbols": [],
+          "user_mentions": [],
+          "urls": [
+            {
+              "url": "https://t.co/tSpKofd13W",
+              "expanded_url": "https://twitter.com/i/web/status/1250498820473081859",
+              "display_url": "twitter.com/i/web/status/1…",
+              "indices": [
+                117,
+                140
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 810293934198923300,
+          "id_str": "810293934198923264",
+          "name": "Matt 💰⚔️⛓",
+          "screen_name": "PlunderAndFeast",
+          "location": "Northeast, USA",
+          "description": "Freelance Artist. Commissions open (starting at $10, DM for quote) Free children’s book: https://t.co/yLz0LTjMAU My art: https://t.co/VB2olICqI8",
+          "url": "https://t.co/rt1sGRyb8t",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "https://t.co/rt1sGRyb8t",
+                  "expanded_url": "https://matt-b.carrd.co/",
+                  "display_url": "matt-b.carrd.co",
+                  "indices": [
+                    0,
+                    23
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "urls": [
+                {
+                  "url": "https://t.co/yLz0LTjMAU",
+                  "expanded_url": "http://gum.co/lgYgV",
+                  "display_url": "gum.co/lgYgV",
+                  "indices": [
+                    89,
+                    112
+                  ]
+                },
+                {
+                  "url": "https://t.co/VB2olICqI8",
+                  "expanded_url": "https://www.etsy.com/shop/MattBusdieckerArt",
+                  "display_url": "etsy.com/shop/MattBusdi…",
+                  "indices": [
+                    121,
+                    144
+                  ]
+                }
+              ]
+            }
+          },
+          "protected": false,
+          "followers_count": 104,
+          "friends_count": 401,
+          "listed_count": 0,
+          "created_at": "Sun Dec 18 01:21:43 +0000 2016",
+          "favourites_count": 893,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": false,
+          "statuses_count": 1109,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "F5F8FA",
+          "profile_background_image_url": null,
+          "profile_background_image_url_https": null,
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1245066550656278529/d8CZyyeL_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1245066550656278529/d8CZyyeL_normal.jpg",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/810293934198923264/1585681995",
+          "profile_link_color": "1DA1F2",
+          "profile_sidebar_border_color": "C0DEED",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": true,
+          "has_extended_profile": false,
+          "default_profile": true,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 1,
+        "favorite_count": 2,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      },
+      "is_quote_status": false,
+      "retweet_count": 1,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:11:02 +0000 2020",
+      "id": 1250501908306858000,
+      "id_str": "1250501908306857985",
+      "text": "RT @msexcel: Need a quick data analysis consult? #Excel has your back. Here's what you can do: https://t.co/zpvzFzW9xP https://t.co/dhfZ4tr…",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "Excel",
+            "indices": [
+              49,
+              55
+            ]
+          }
+        ],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "msexcel",
+            "name": "Microsoft Excel",
+            "id": 15934026,
+            "id_str": "15934026",
+            "indices": [
+              3,
+              11
+            ]
+          }
+        ],
+        "urls": [
+          {
+            "url": "https://t.co/zpvzFzW9xP",
+            "expanded_url": "https://msft.it/6016T5Vii",
+            "display_url": "msft.it/6016T5Vii",
+            "indices": [
+              95,
+              118
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 1250268228498026500,
+        "id_str": "1250268228498026496",
+        "name": "learnbusinessfun",
+        "screen_name": "learnbusinessf1",
+        "location": "",
+        "description": "Excel and business tips and tricks - to help make your work more fun!",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 10,
+        "listed_count": 0,
+        "created_at": "Wed Apr 15 03:43:14 +0000 2020",
+        "favourites_count": 5,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 2,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1250275139523993600/gE8t_7fh_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1250275139523993600/gE8t_7fh_normal.jpg",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweeted_status": {
+        "created_at": "Wed Apr 15 14:15:19 +0000 2020",
+        "id": 1250427486057291800,
+        "id_str": "1250427486057291776",
+        "text": "Need a quick data analysis consult? #Excel has your back. Here's what you can do: https://t.co/zpvzFzW9xP https://t.co/dhfZ4trN25",
+        "truncated": false,
+        "entities": {
+          "hashtags": [
+            {
+              "text": "Excel",
+              "indices": [
+                36,
+                42
+              ]
+            }
+          ],
+          "symbols": [],
+          "user_mentions": [],
+          "urls": [
+            {
+              "url": "https://t.co/zpvzFzW9xP",
+              "expanded_url": "https://msft.it/6016T5Vii",
+              "display_url": "msft.it/6016T5Vii",
+              "indices": [
+                82,
+                105
+              ]
+            }
+          ],
+          "media": [
+            {
+              "id": 1250427412501823500,
+              "id_str": "1250427412501823489",
+              "indices": [
+                106,
+                129
+              ],
+              "media_url": "http://pbs.twimg.com/media/EVppKoOU0AIhW3w.jpg",
+              "media_url_https": "https://pbs.twimg.com/media/EVppKoOU0AIhW3w.jpg",
+              "url": "https://t.co/dhfZ4trN25",
+              "display_url": "pic.twitter.com/dhfZ4trN25",
+              "expanded_url": "https://twitter.com/msexcel/status/1250427486057291776/video/1",
+              "type": "photo",
+              "sizes": {
+                "thumb": {
+                  "w": 150,
+                  "h": 150,
+                  "resize": "crop"
+                },
+                "large": {
+                  "w": 1920,
+                  "h": 1080,
+                  "resize": "fit"
+                },
+                "medium": {
+                  "w": 1200,
+                  "h": 675,
+                  "resize": "fit"
+                },
+                "small": {
+                  "w": 680,
+                  "h": 383,
+                  "resize": "fit"
+                }
+              }
+            }
+          ]
+        },
+        "extended_entities": {
+          "media": [
+            {
+              "id": 1250427412501823500,
+              "id_str": "1250427412501823489",
+              "indices": [
+                106,
+                129
+              ],
+              "media_url": "http://pbs.twimg.com/media/EVppKoOU0AIhW3w.jpg",
+              "media_url_https": "https://pbs.twimg.com/media/EVppKoOU0AIhW3w.jpg",
+              "url": "https://t.co/dhfZ4trN25",
+              "display_url": "pic.twitter.com/dhfZ4trN25",
+              "expanded_url": "https://twitter.com/msexcel/status/1250427486057291776/video/1",
+              "type": "video",
+              "sizes": {
+                "thumb": {
+                  "w": 150,
+                  "h": 150,
+                  "resize": "crop"
+                },
+                "large": {
+                  "w": 1920,
+                  "h": 1080,
+                  "resize": "fit"
+                },
+                "medium": {
+                  "w": 1200,
+                  "h": 675,
+                  "resize": "fit"
+                },
+                "small": {
+                  "w": 680,
+                  "h": 383,
+                  "resize": "fit"
+                }
+              },
+              "video_info": {
+                "aspect_ratio": [
+                  16,
+                  9
+                ],
+                "duration_millis": 37533,
+                "variants": [
+                  {
+                    "bitrate": 832000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1250427412501823489/pu/vid/640x360/pL2vO5MBleWDvmjI.mp4?tag=10"
+                  },
+                  {
+                    "content_type": "application/x-mpegURL",
+                    "url": "https://video.twimg.com/ext_tw_video/1250427412501823489/pu/pl/RQQMycWBie8nr3fE.m3u8?tag=10"
+                  },
+                  {
+                    "bitrate": 256000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1250427412501823489/pu/vid/480x270/k5XwH6QwXkXt0BpT.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 2176000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1250427412501823489/pu/vid/1280x720/meefpcU5oPY21jNm.mp4?tag=10"
+                  }
+                ]
+              },
+              "additional_media_info": {
+                "monetizable": false
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://prod2.sprinklr.com\" rel=\"nofollow\">Sprinklr Publisher</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 15934026,
+          "id_str": "15934026",
+          "name": "Microsoft Excel",
+          "screen_name": "msexcel",
+          "location": "Redmond, WA",
+          "description": "Master your data to achieve more with Microsoft Excel.",
+          "url": "http://t.co/HcFOqOg4FX",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "http://t.co/HcFOqOg4FX",
+                  "expanded_url": "http://office.microsoft.com/excel",
+                  "display_url": "office.microsoft.com/excel",
+                  "indices": [
+                    0,
+                    22
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 127217,
+          "friends_count": 179,
+          "listed_count": 1338,
+          "created_at": "Thu Aug 21 17:27:45 +0000 2008",
+          "favourites_count": 3797,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": true,
+          "statuses_count": 68781,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "4A913C",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1129474049199882240/RZPZ1KYT_normal.png",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1129474049199882240/RZPZ1KYT_normal.png",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/15934026/1507677923",
+          "profile_link_color": "0000FF",
+          "profile_sidebar_border_color": "FFFFFF",
+          "profile_sidebar_fill_color": "E0FF92",
+          "profile_text_color": "000000",
+          "profile_use_background_image": false,
+          "has_extended_profile": false,
+          "default_profile": false,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 41,
+        "favorite_count": 123,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      },
+      "is_quote_status": false,
+      "retweet_count": 41,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:10:31 +0000 2020",
+      "id": 1250501778426208300,
+      "id_str": "1250501778426208257",
+      "text": "RT @MicrosoftTeams: As an IT professtional, you may be getting a lot questions about video conferencing, privacy, and security. Explore our…",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "MicrosoftTeams",
+            "name": "Microsoft Teams",
+            "id": 817461289081409500,
+            "id_str": "817461289081409536",
+            "indices": [
+              3,
+              18
+            ]
+          }
+        ],
+        "urls": []
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 21134332,
+        "id_str": "21134332",
+        "name": "Konrad Sagala",
+        "screen_name": "sagus",
+        "location": "Poland",
+        "description": "Microsoft MVP - Office Apps & Services, MCT, consultant",
+        "url": "http://t.co/pKo8h78tHS",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/pKo8h78tHS",
+                "expanded_url": "http://pepugmaster.blogspot.com",
+                "display_url": "pepugmaster.blogspot.com",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 551,
+        "friends_count": 353,
+        "listed_count": 53,
+        "created_at": "Tue Feb 17 21:43:34 +0000 2009",
+        "favourites_count": 63,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 2658,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "1A1B1F",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme9/bg.gif",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme9/bg.gif",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1532607651/c2dedbf9-1a27-4df8-a95a-1f737923f193_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1532607651/c2dedbf9-1a27-4df8-a95a-1f737923f193_normal.png",
+        "profile_link_color": "2FC2EF",
+        "profile_sidebar_border_color": "181A1E",
+        "profile_sidebar_fill_color": "252429",
+        "profile_text_color": "666666",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweeted_status": {
+        "created_at": "Wed Apr 15 19:05:00 +0000 2020",
+        "id": 1250500388173856800,
+        "id_str": "1250500388173856769",
+        "text": "As an IT professtional, you may be getting a lot questions about video conferencing, privacy, and security. Explore… https://t.co/XNSz4DTntm",
+        "truncated": true,
+        "entities": {
+          "hashtags": [],
+          "symbols": [],
+          "user_mentions": [],
+          "urls": [
+            {
+              "url": "https://t.co/XNSz4DTntm",
+              "expanded_url": "https://twitter.com/i/web/status/1250500388173856769",
+              "display_url": "twitter.com/i/web/status/1…",
+              "indices": [
+                117,
+                140
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://prod1.sprinklr.com\" rel=\"nofollow\">Sprinklr Publishing</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 817461289081409500,
+          "id_str": "817461289081409536",
+          "name": "Microsoft Teams",
+          "screen_name": "MicrosoftTeams",
+          "location": "",
+          "description": "Bring together all of your team’s conversations, files, and tools in a single workspace with Microsoft Teams in Office 365.",
+          "url": "https://t.co/9Yr5Kd5jsy",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "https://t.co/9Yr5Kd5jsy",
+                  "expanded_url": "https://aka.ms/MicrosoftTeamsBio",
+                  "display_url": "aka.ms/MicrosoftTeams…",
+                  "indices": [
+                    0,
+                    23
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 137888,
+          "friends_count": 262,
+          "listed_count": 1092,
+          "created_at": "Fri Jan 06 20:02:13 +0000 2017",
+          "favourites_count": 9797,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": true,
+          "statuses_count": 14354,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "F5F8FA",
+          "profile_background_image_url": null,
+          "profile_background_image_url_https": null,
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1128330992328921090/nVNqd5QP_normal.png",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1128330992328921090/nVNqd5QP_normal.png",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/817461289081409536/1496693898",
+          "profile_link_color": "1DA1F2",
+          "profile_sidebar_border_color": "C0DEED",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": true,
+          "has_extended_profile": false,
+          "default_profile": true,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 7,
+        "favorite_count": 10,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      },
+      "is_quote_status": false,
+      "retweet_count": 7,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:10:29 +0000 2020",
+      "id": 1250501770444509200,
+      "id_str": "1250501770444509184",
+      "text": "RT @MicrosoftEDU: There are tons of ways to connect, collaborate, and engage with students using #MicrosoftEDU. Learn about a few of our fa…",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "MicrosoftEDU",
+            "indices": [
+              97,
+              110
+            ]
+          }
+        ],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "MicrosoftEDU",
+            "name": "Microsoft Education",
+            "id": 17826187,
+            "id_str": "17826187",
+            "indices": [
+              3,
+              16
+            ]
+          }
+        ],
+        "urls": []
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 865887202814943200,
+        "id_str": "865887202814943234",
+        "name": "Chris Melia #edtech",
+        "screen_name": "ChrisLearnTech",
+        "location": "North West, England",
+        "description": "Senior Learning Technologist @UCLan • @MicrosoftEDU Learning Consultant in UK • #DigiLearnSector Lead • @AdvanceHE Fellow • @EdTech_Talks Podcast",
+        "url": "https://t.co/ydQZjhuEDb",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "https://t.co/ydQZjhuEDb",
+                "expanded_url": "https://uclan.ac.uk/digilearnsector",
+                "display_url": "uclan.ac.uk/digilearnsector",
+                "indices": [
+                  0,
+                  23
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1250,
+        "friends_count": 395,
+        "listed_count": 21,
+        "created_at": "Sat May 20 11:09:31 +0000 2017",
+        "favourites_count": 9399,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 3159,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1229873382960791552/xK-XLH37_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1229873382960791552/xK-XLH37_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/865887202814943234/1585505607",
+        "profile_link_color": "FF691F",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweeted_status": {
+        "created_at": "Wed Apr 15 19:00:03 +0000 2020",
+        "id": 1250499143572824000,
+        "id_str": "1250499143572824064",
+        "text": "There are tons of ways to connect, collaborate, and engage with students using #MicrosoftEDU. Learn about a few of… https://t.co/3LTMv84q7G",
+        "truncated": true,
+        "entities": {
+          "hashtags": [
+            {
+              "text": "MicrosoftEDU",
+              "indices": [
+                79,
+                92
+              ]
+            }
+          ],
+          "symbols": [],
+          "user_mentions": [],
+          "urls": [
+            {
+              "url": "https://t.co/3LTMv84q7G",
+              "expanded_url": "https://twitter.com/i/web/status/1250499143572824064",
+              "display_url": "twitter.com/i/web/status/1…",
+              "indices": [
+                116,
+                139
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://prod2.sprinklr.com\" rel=\"nofollow\">Sprinklr Publisher</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 17826187,
+          "id_str": "17826187",
+          "name": "Microsoft Education",
+          "screen_name": "MicrosoftEDU",
+          "location": "Redmond, WA",
+          "description": "Empowering every student and educator to achieve more with the best of Microsoft tips and resources for education. #MicrosoftEDU",
+          "url": "https://t.co/PstVZHAjVU",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "https://t.co/PstVZHAjVU",
+                  "expanded_url": "https://educationblog.microsoft.com",
+                  "display_url": "educationblog.microsoft.com",
+                  "indices": [
+                    0,
+                    23
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 377489,
+          "friends_count": 4368,
+          "listed_count": 3485,
+          "created_at": "Wed Dec 03 02:29:33 +0000 2008",
+          "favourites_count": 28649,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": true,
+          "statuses_count": 41532,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "00BCF2",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1062798346409074688/6pQHQSeL_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1062798346409074688/6pQHQSeL_normal.jpg",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/17826187/1508952382",
+          "profile_link_color": "0078D7",
+          "profile_sidebar_border_color": "FFFFFF",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": false,
+          "has_extended_profile": false,
+          "default_profile": false,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 4,
+        "favorite_count": 6,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      },
+      "is_quote_status": false,
+      "retweet_count": 4,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:10:29 +0000 2020",
+      "id": 1250501769374969900,
+      "id_str": "1250501769374969858",
+      "text": "RT @windowsdev: Our Instagram Takeover guest is 🥁...\n\n@Cinnamon_msft! 🎉 Tune in tomorrow to get a sneak peek into Kayla's #WFH setup, new v…",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "WFH",
+            "indices": [
+              122,
+              126
+            ]
+          }
+        ],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "windowsdev",
+            "name": "Windows Developer",
+            "id": 16334724,
+            "id_str": "16334724",
+            "indices": [
+              3,
+              14
+            ]
+          },
+          {
+            "screen_name": "cinnamon_msft",
+            "name": "Kayla Cinnamon ☕",
+            "id": 1105574758328877000,
+            "id_str": "1105574758328877056",
+            "indices": [
+              54,
+              68
+            ]
+          }
+        ],
+        "urls": []
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 130927779,
+        "id_str": "130927779",
+        "name": "Paul Burns",
+        "screen_name": "InnerFury4K",
+        "location": "Scotland",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 784,
+        "friends_count": 412,
+        "listed_count": 227,
+        "created_at": "Thu Apr 08 19:18:25 +0000 2010",
+        "favourites_count": 268661,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 230708,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "940909",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1239319777937633280/vsK5xzq0_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1239319777937633280/vsK5xzq0_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/130927779/1584311836",
+        "profile_link_color": "050808",
+        "profile_sidebar_border_color": "D60B0B",
+        "profile_sidebar_fill_color": "E00719",
+        "profile_text_color": "0A000A",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweeted_status": {
+        "created_at": "Wed Apr 15 18:37:51 +0000 2020",
+        "id": 1250493557892198400,
+        "id_str": "1250493557892198401",
+        "text": "Our Instagram Takeover guest is 🥁...\n\n@Cinnamon_msft! 🎉 Tune in tomorrow to get a sneak peek into Kayla's #WFH setu… https://t.co/XcT7UWHdqN",
+        "truncated": true,
+        "entities": {
+          "hashtags": [
+            {
+              "text": "WFH",
+              "indices": [
+                106,
+                110
+              ]
+            }
+          ],
+          "symbols": [],
+          "user_mentions": [
+            {
+              "screen_name": "cinnamon_msft",
+              "name": "Kayla Cinnamon ☕",
+              "id": 1105574758328877000,
+              "id_str": "1105574758328877056",
+              "indices": [
+                38,
+                52
+              ]
+            }
+          ],
+          "urls": [
+            {
+              "url": "https://t.co/XcT7UWHdqN",
+              "expanded_url": "https://twitter.com/i/web/status/1250493557892198401",
+              "display_url": "twitter.com/i/web/status/1…",
+              "indices": [
+                117,
+                140
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://ads-api.twitter.com\" rel=\"nofollow\">Twitter for Advertisers</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 16334724,
+          "id_str": "16334724",
+          "name": "Windows Developer",
+          "screen_name": "windowsdev",
+          "location": "Redmond, WA",
+          "description": "Everything you need to know to develop great apps, games and other experiences for Windows on PCs, phones, IoT, Xbox & HoloLens.",
+          "url": "https://t.co/tsIqCtMlrV",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "https://t.co/tsIqCtMlrV",
+                  "expanded_url": "https://developer.microsoft.com/windows",
+                  "display_url": "developer.microsoft.com/windows",
+                  "indices": [
+                    0,
+                    23
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 518662,
+          "friends_count": 5625,
+          "listed_count": 4626,
+          "created_at": "Wed Sep 17 19:10:25 +0000 2008",
+          "favourites_count": 4948,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": true,
+          "statuses_count": 19850,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "E1E1E1",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme16/bg.gif",
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme16/bg.gif",
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/614527023260635136/zEZFYSrD_normal.png",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/614527023260635136/zEZFYSrD_normal.png",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/16334724/1563392953",
+          "profile_link_color": "0084B4",
+          "profile_sidebar_border_color": "000000",
+          "profile_sidebar_fill_color": "FCFCFC",
+          "profile_text_color": "333333",
+          "profile_use_background_image": false,
+          "has_extended_profile": false,
+          "default_profile": false,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 2,
+        "favorite_count": 19,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+      },
+      "is_quote_status": false,
+      "retweet_count": 2,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:10:15 +0000 2020",
+      "id": 1250501710792941600,
+      "id_str": "1250501710792941568",
+      "text": "@edbaker1965 @JohnMarlin_MSFT @lisaattheedge @PBradz @DaveKawula @KennyLowe @jantorep @Pixel_Robots @MVPDays… https://t.co/D2IxFvjutF",
+      "truncated": true,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "edbaker1965",
+            "name": "Ed Baker",
+            "id": 20801290,
+            "id_str": "20801290",
+            "indices": [
+              0,
+              12
+            ]
+          },
+          {
+            "screen_name": "JohnMarlin_MSFT",
+            "name": "John Marlin",
+            "id": 984923577639026700,
+            "id_str": "984923577639026693",
+            "indices": [
+              13,
+              29
+            ]
+          },
+          {
+            "screen_name": "lisaattheedge",
+            "name": "🦄 L I S A 🌩",
+            "id": 2298183415,
+            "id_str": "2298183415",
+            "indices": [
+              30,
+              44
+            ]
+          },
+          {
+            "screen_name": "PBradz",
+            "name": "Phil Bradham",
+            "id": 13822752,
+            "id_str": "13822752",
+            "indices": [
+              45,
+              52
+            ]
+          },
+          {
+            "screen_name": "DaveKawula",
+            "name": "Dave Kawula",
+            "id": 237039841,
+            "id_str": "237039841",
+            "indices": [
+              53,
+              64
+            ]
+          },
+          {
+            "screen_name": "KennyLowe",
+            "name": "Kenny Lowe",
+            "id": 18226862,
+            "id_str": "18226862",
+            "indices": [
+              65,
+              75
+            ]
+          },
+          {
+            "screen_name": "jantorep",
+            "name": "Jan-Tore Pedersen",
+            "id": 4878478564,
+            "id_str": "4878478564",
+            "indices": [
+              76,
+              85
+            ]
+          },
+          {
+            "screen_name": "Pixel_Robots",
+            "name": "Pixel Robots. (Richard Hooper)",
+            "id": 61851975,
+            "id_str": "61851975",
+            "indices": [
+              86,
+              99
+            ]
+          },
+          {
+            "screen_name": "MVPDays",
+            "name": "MVPDays Official",
+            "id": 3590140588,
+            "id_str": "3590140588",
+            "indices": [
+              100,
+              108
+            ]
+          }
+        ],
+        "urls": [
+          {
+            "url": "https://t.co/D2IxFvjutF",
+            "expanded_url": "https://twitter.com/i/web/status/1250501710792941568",
+            "display_url": "twitter.com/i/web/status/1…",
+            "indices": [
+              110,
+              133
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "in_reply_to_status_id": 1250501108683780000,
+      "in_reply_to_status_id_str": "1250501108683780096",
+      "in_reply_to_user_id": 209225066,
+      "in_reply_to_user_id_str": "209225066",
+      "in_reply_to_screen_name": "WSV_GUY",
+      "user": {
+        "id": 209225066,
+        "id_str": "209225066",
+        "name": "Jeff Woolsey",
+        "screen_name": "WSV_GUY",
+        "location": "Washington, USA",
+        "description": "Principal Program Manager, Azure Stack HCI/Windows Server/Hybrid Cloud. Tweets are mine and don't represent my company.",
+        "url": "https://t.co/AHwPvbZUQO",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "https://t.co/AHwPvbZUQO",
+                "expanded_url": "http://blogs.technet.com/b/virtualization/",
+                "display_url": "blogs.technet.com/b/virtualizati…",
+                "indices": [
+                  0,
+                  23
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 4544,
+        "friends_count": 286,
+        "listed_count": 318,
+        "created_at": "Thu Oct 28 19:24:03 +0000 2010",
+        "favourites_count": 38423,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 55856,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/740676307709661184/ia6l_QH9_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/740676307709661184/ia6l_QH9_normal.jpg",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 3,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:10:02 +0000 2020",
+      "id": 1250501655914844200,
+      "id_str": "1250501655914844165",
+      "text": "RT @MicrosoftEDU: There are tons of ways to connect, collaborate, and engage with students using #MicrosoftEDU. Learn about a few of our fa…",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "MicrosoftEDU",
+            "indices": [
+              97,
+              110
+            ]
+          }
+        ],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "MicrosoftEDU",
+            "name": "Microsoft Education",
+            "id": 17826187,
+            "id_str": "17826187",
+            "indices": [
+              3,
+              16
+            ]
+          }
+        ],
+        "urls": []
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 749242830728601600,
+        "id_str": "749242830728601600",
+        "name": "Donel  Adams",
+        "screen_name": "DonelAdams",
+        "location": "Youngstown, OH",
+        "description": "Consultant",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1168,
+        "friends_count": 4989,
+        "listed_count": 256,
+        "created_at": "Sat Jul 02 14:06:25 +0000 2016",
+        "favourites_count": 128,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 91460,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweeted_status": {
+        "created_at": "Wed Apr 15 19:00:03 +0000 2020",
+        "id": 1250499143572824000,
+        "id_str": "1250499143572824064",
+        "text": "There are tons of ways to connect, collaborate, and engage with students using #MicrosoftEDU. Learn about a few of… https://t.co/3LTMv84q7G",
+        "truncated": true,
+        "entities": {
+          "hashtags": [
+            {
+              "text": "MicrosoftEDU",
+              "indices": [
+                79,
+                92
+              ]
+            }
+          ],
+          "symbols": [],
+          "user_mentions": [],
+          "urls": [
+            {
+              "url": "https://t.co/3LTMv84q7G",
+              "expanded_url": "https://twitter.com/i/web/status/1250499143572824064",
+              "display_url": "twitter.com/i/web/status/1…",
+              "indices": [
+                116,
+                139
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"https://prod2.sprinklr.com\" rel=\"nofollow\">Sprinklr Publisher</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 17826187,
+          "id_str": "17826187",
+          "name": "Microsoft Education",
+          "screen_name": "MicrosoftEDU",
+          "location": "Redmond, WA",
+          "description": "Empowering every student and educator to achieve more with the best of Microsoft tips and resources for education. #MicrosoftEDU",
+          "url": "https://t.co/PstVZHAjVU",
+          "entities": {
+            "url": {
+              "urls": [
+                {
+                  "url": "https://t.co/PstVZHAjVU",
+                  "expanded_url": "https://educationblog.microsoft.com",
+                  "display_url": "educationblog.microsoft.com",
+                  "indices": [
+                    0,
+                    23
+                  ]
+                }
+              ]
+            },
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 377489,
+          "friends_count": 4368,
+          "listed_count": 3485,
+          "created_at": "Wed Dec 03 02:29:33 +0000 2008",
+          "favourites_count": 28649,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": true,
+          "statuses_count": 41532,
+          "lang": null,
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "00BCF2",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1062798346409074688/6pQHQSeL_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1062798346409074688/6pQHQSeL_normal.jpg",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/17826187/1508952382",
+          "profile_link_color": "0078D7",
+          "profile_sidebar_border_color": "FFFFFF",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": false,
+          "has_extended_profile": false,
+          "default_profile": false,
+          "default_profile_image": false,
+          "following": null,
+          "follow_request_sent": null,
+          "notifications": null,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 4,
+        "favorite_count": 6,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      },
+      "is_quote_status": false,
+      "retweet_count": 4,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Apr 15 19:09:58 +0000 2020",
+      "id": 1250501637942251500,
+      "id_str": "1250501637942251521",
+      "text": "Slack is far from perfect - I can list off a bunch of things I don't like about it - but Teams looks like someone h… https://t.co/m3d4hlXxNM",
+      "truncated": true,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [
+          {
+            "url": "https://t.co/m3d4hlXxNM",
+            "expanded_url": "https://twitter.com/i/web/status/1250501637942251521",
+            "display_url": "twitter.com/i/web/status/1…",
+            "indices": [
+              117,
+              140
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "in_reply_to_status_id": 1250501298652397600,
+      "in_reply_to_status_id_str": "1250501298652397569",
+      "in_reply_to_user_id": 52081942,
+      "in_reply_to_user_id_str": "52081942",
+      "in_reply_to_screen_name": "agentkyle",
+      "user": {
+        "id": 52081942,
+        "id_str": "52081942",
+        "name": "Kyle Putnam",
+        "screen_name": "agentkyle",
+        "location": "Omaha, NE",
+        "description": "Yes, I played basketball.",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 602,
+        "friends_count": 528,
+        "listed_count": 41,
+        "created_at": "Mon Jun 29 15:07:25 +0000 2009",
+        "favourites_count": 31705,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 123,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/673282221185232896/wEcAX6DR_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/673282221185232896/wEcAX6DR_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/52081942/1398268793",
+        "profile_link_color": "FAA847",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "FF9900",
+        "profile_text_color": "333333",
+        "profile_use_background_image": false,
+        "has_extended_profile": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    }
+  ],
+  "search_metadata": {
+    "completed_in": 0.096,
+    "max_id": 1250502253187870700,
+    "max_id_str": "1250502253187870723",
+    "next_results": "?max_id=1250501637942251520&q=MSFT&include_entities=1",
+    "query": "MSFT",
+    "refresh_url": "?since_id=1250502253187870723&q=MSFT&include_entities=1",
+    "count": 15,
+    "since_id": 0,
+    "since_id_str": "0"
+  }
+}
