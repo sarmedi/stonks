@@ -47,6 +47,7 @@
     "react-native-tweet-view": "^1.0.2",
     "react-native-vector-icons": "^6.6.0",
     "react-native-web": "~0.11.7",
+    "react-native-webview": "^9.2.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-stockcharts": "^0.7.8",
