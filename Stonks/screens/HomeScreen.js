@@ -64,7 +64,6 @@ var styles_home = StyleSheet.create({
   titleText: {
     fontSize: 60,
     fontWeight: 'bold',
-    fontFamily: 'Copperplate',
     color: '#1A741D',
   },
   titleText2: {
