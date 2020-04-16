@@ -22,6 +22,7 @@ function StockPage({ route, navigation }) {
     const [weekmax, setWeekMax] = useState('');
     const [weekmin, setWeekMin] = useState('');
     const [results, setResults] = useState([{}]);
+    const [twitterData, setTwitter]=useState([{}]);
     const [line, setLine] = useState({
             
         labels: ['03-26','03-27','03-30','03-31', '04-01','04-02', '04-03'],
@@ -59,11 +60,15 @@ function StockPage({ route, navigation }) {
         }).catch(error => {
             console.log('found error', error)
           });
+        
     }
     );
     if (!loaded){
         return (
-            <ActivityIndicator size="large" color="#1A741D" />
+            <View>
+                <ActivityIndicator size="large" color="#1A741D" />
+            </View>
+            
         );
     }else{
         return (
@@ -114,6 +119,7 @@ function StockPage({ route, navigation }) {
     
                         Volume: {Number(volume).toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
                     </Text>
+                    
                     
                 </ScrollView>
         );
