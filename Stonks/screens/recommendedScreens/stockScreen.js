@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { Component, useState, useEffect } from "react";
 import { ScrollView, FlatList } from 'react-native-gesture-handler';
 import {StyleSheet, Text, View, Platform, Dimensions, ActivityIndicator, requireNativeComponent } from "react-native";
-import Tweet from 'react-native-tweet-view';
 
 
 import {
