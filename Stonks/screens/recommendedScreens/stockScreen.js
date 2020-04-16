@@ -119,7 +119,7 @@ function StockPage({ route, navigation }) {
                     <Text style={styles_stock.titleText3}>
                         Relevant Tweets:
                     </Text>
-                    <View style={{ height: 600, width: 400 }}>
+                    <View style={{ height: 600}}>
                     <WebView
                       automaticallyAdjustContentInsets={false}
                       source={{uri: "https://twitter.com/search?q=%24"+ticker+"&src=typed_query&f=live"}}
