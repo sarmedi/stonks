@@ -1,15 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export function Card (props){
 	<Container>
-
 		<Content>
-			<Name>Pepper</Name>
-			<TweetText>$ 2.99 each</TweetText>
+			<Name>{props.username}</Name>
+			<TweetText>{props.text}</TweetText>
 		</Content>
 	</Container>
 };
-
 
 const Container = styled.View`
 	background: #fff;
@@ -19,7 +18,6 @@ const Container = styled.View`
 	margin: 18px;
 	margin-top: 20px;
 `;
-
 
 
 const Content = styled.View`

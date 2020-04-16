@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { Component, useState, useEffect } from "react";
 import { ScrollView, FlatList } from 'react-native-gesture-handler';
-import {StyleSheet, Text, View, Platform, Dimensions, ActivityIndicator, requireNativeComponent } from "react-native";
+import {StyleSheet, Text, View, Platform, Dimensions, ActivityIndicator } from "react-native";
+import Card from '../../components/Card';
+import _ from 'lodash';
 
 
 import {
@@ -27,7 +29,7 @@ function StockPage({ route, navigation }) {
     const [tweets, setTweets] = useState([{}]);
     const [line, setLine] = useState({
             
-        labels: ['03-26','03-27','03-30','03-31', '04-01','04-02', '04-03'],
+        labels: ['2020-04-06','2020-04-07','2020-04-08','2020-04-09', '2020-04-13','2020-04-14', '2020-04-15'],
         datasets: [
           {
             data: [0,0,0,0,0,0,0],
@@ -35,49 +37,91 @@ function StockPage({ route, navigation }) {
           },
         ],
       });
-    const [loaded, SetLoaded] =useState(false);
+    const [loaded, SetLoaded] = useState(false);
     useEffect(() =>{
-        fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`).then(res => res.json())
-        .then((result_) => {
-            // Update the state of results array
-            setResults(result_);
-            var data_api = {
-                labels: formatted_labels,
-                datasets: [
-                    {
-                        data: [result_["Time Series (Daily)"][labels_[0]]["4. close"], result_["Time Series (Daily)"][labels_[1]]["4. close"],result_["Time Series (Daily)"][labels_[2]]["4. close"],result_["Time Series (Daily)"][labels_[3]]["4. close"],result_["Time Series (Daily)"][labels_[4]]["4. close"],result_["Time Series (Daily)"][labels_[5]]["4. close"],result_["Time Series (Daily)"][labels_[6]]["4. close"]],
-                        strokeWidth: 2,
-                    }
-                ]
-            }
-            setLine(data_api);
-            setClose(result_["Time Series (Daily)"][labels_[6]]["4. close"]);
-            setOpen(result_["Time Series (Daily)"][labels_[6]]["1. open"]);
-            setHigh(result_["Time Series (Daily)"][labels_[6]]["2. high"]);
-            setVolume(result_["Time Series (Daily)"][labels_[6]]["5. volume"]);
-            setWeekClose([Number(result_["Time Series (Daily)"][labels_[0]]["4. close"]), Number(result_["Time Series (Daily)"][labels_[1]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[2]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[3]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[4]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[5]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[6]]["4. close"])]);
-            setWeekMax(Math.max.apply(Math, weekclose));
-            setWeekMin(Math.min.apply(Math, weekclose));
-            SetLoaded(true);
-        }).catch(error => {
-            console.log('found error', error)
-          });
-        fetch(`http://localhost:7890/1.1/search/tweets.json?q=${ticker}`).then(res => res.json())
-        .then((result_) => {
-            // Update the state of results array
-            setTweets(result_);
-        }).catch(error => {
-            console.log('found error', error)
-          });
+            Promise.all([fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`), 
+                        fetch(`http://localhost:7890/1.1/search/tweets.json?q=${ticker}`)])
+        
+              .then(([res1, res2]) => { 
+                 return Promise.all([res1.json(), res2.json()]); 
+              })
+              .then(([res1, res2]) => {
+                // set state in here
+ 
+                // ALPHAVANTAGE API CALL /////////////////////////////////////////////////////////
+                console.log(res1);
+                setResults(res1);
+                var data_api = {
+                    labels: formatted_labels,
+                    datasets: [
+                        {
+                            data: [res1["Time Series (Daily)"][labels_[0]]["4. close"], res1["Time Series (Daily)"][labels_[1]]["4. close"],res1["Time Series (Daily)"][labels_[2]]["4. close"],res1["Time Series (Daily)"][labels_[3]]["4. close"],res1["Time Series (Daily)"][labels_[4]]["4. close"],res1["Time Series (Daily)"][labels_[5]]["4. close"],res1["Time Series (Daily)"][labels_[6]]["4. close"]],
+                            strokeWidth: 2,
+                        }
+                    ]
+                }
+                setLine(data_api);
+                setClose(res1["Time Series (Daily)"][labels_[6]]["4. close"]);
+                setOpen(res1["Time Series (Daily)"][labels_[6]]["1. open"]);
+                setHigh(res1["Time Series (Daily)"][labels_[6]]["2. high"]);
+                setVolume(res1["Time Series (Daily)"][labels_[6]]["5. volume"]);
+                setWeekClose([Number(res1["Time Series (Daily)"][labels_[0]]["4. close"]), Number(res1["Time Series (Daily)"][labels_[1]]["4. close"]),Number(res1["Time Series (Daily)"][labels_[2]]["4. close"]),Number(res1["Time Series (Daily)"][labels_[3]]["4. close"]),Number(res1["Time Series (Daily)"][labels_[4]]["4. close"]),Number(res1["Time Series (Daily)"][labels_[5]]["4. close"]),Number(res1["Time Series (Daily)"][labels_[6]]["4. close"])]);
+                setWeekMax(Math.max.apply(Math, weekclose));
+                setWeekMin(Math.min.apply(Math, weekclose));
+                SetLoaded(true);
+
+                // TWITTER API CALL ///////////////////////////////////////////////////////////////////
+                console.log(res2);
+                let array = _.flattenDeep( Array.from(res2.data['statuses']).map((tweet) => 
+                [{timePosted: tweet['created_at'], id: tweet['id'], text: tweet['text'], 
+                userName: tweet['user']['name'], userScreenName: tweet['user']['screen_name'], 
+                verified: tweet['user']['verified'], retweetCount: tweet['retweent_count'], 
+                favoriteCount: tweet['favorite_count']}]) );
+                setTweets(array);
+                console.log(tweets);
+              });
+        // fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`).then(res => res.json())
+        // .then((result_) => {
+        //     // Update the state of results array
+        //     console.log(result_);
+        //     setResults(result_);
+        //     var data_api = {
+        //         labels: formatted_labels,
+        //         datasets: [
+        //             {
+        //                 data: [result_["Time Series (Daily)"][labels_[0]]["4. close"], result_["Time Series (Daily)"][labels_[1]]["4. close"],result_["Time Series (Daily)"][labels_[2]]["4. close"],result_["Time Series (Daily)"][labels_[3]]["4. close"],result_["Time Series (Daily)"][labels_[4]]["4. close"],result_["Time Series (Daily)"][labels_[5]]["4. close"],result_["Time Series (Daily)"][labels_[6]]["4. close"]],
+        //                 strokeWidth: 2,
+        //             }
+        //         ]
+        //     }
+        //     setLine(data_api);
+        //     setClose(result_["Time Series (Daily)"][labels_[6]]["4. close"]);
+        //     setOpen(result_["Time Series (Daily)"][labels_[6]]["1. open"]);
+        //     setHigh(result_["Time Series (Daily)"][labels_[6]]["2. high"]);
+        //     setVolume(result_["Time Series (Daily)"][labels_[6]]["5. volume"]);
+        //     setWeekClose([Number(result_["Time Series (Daily)"][labels_[0]]["4. close"]), Number(result_["Time Series (Daily)"][labels_[1]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[2]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[3]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[4]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[5]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[6]]["4. close"])]);
+        //     setWeekMax(Math.max.apply(Math, weekclose));
+        //     setWeekMin(Math.min.apply(Math, weekclose));
+        //     SetLoaded(true);
+        // }).catch(error => {
+        //     console.log('found error', error)
+        //   });
+        // fetch(`http://localhost:7890/1.1/search/tweets.json?q=${ticker}`).then(res => res.json())
+        // .then((result_) => {
+        //     // Update the state of results array
+        //     let array = _.flattenDeep( Array.from(result_.data['statuses']).map((tweet) => 
+        //     [{timePosted: tweet['created_at'], id: tweet['id'], text: tweet['text'], 
+        //     userName: tweet['user']['name'], userScreenName: tweet['user']['screen_name'], 
+        //     verified: tweet['user']['verified'], retweetCount: tweet['retweent_count'], 
+        //     favoriteCount: tweet['favorite_count']}]) );
+        //     setTweets(array);
+        //     console.log(tweets);
+        // }).catch(error => {
+        //     console.log('found error', error)
+        //   });
     }
     );
-    function Item({ idVal }) {
-        return (
-          <View>
-            <Tweet id='idVal' />
-          </View>
-        );
-      }
+
     if (!loaded){
         return (
             <View>
@@ -131,12 +175,11 @@ function StockPage({ route, navigation }) {
                     </Text>
                     
                     <Text style={styles_stock.titleText2_}>
-    
                         Volume: {Number(volume).toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
                     </Text>
                     <FlatList
                         data={tweets}
-                        renderItem={({ item }) => <Item idVal={item['id_str']} />}
+                        renderItem={({ item }) => <Card username={item.userName} text={item.text}/>}
                         keyExtractor={item => item['id']}
                     />
                 </ScrollView>
@@ -145,6 +188,7 @@ function StockPage({ route, navigation }) {
     
     
 } export default StockPage
+
 var styles_stock = StyleSheet.create({
     titleText: {
       fontSize: 50,
