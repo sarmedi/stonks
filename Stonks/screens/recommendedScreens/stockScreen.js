@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { Component, useState, useEffect } from "react";
 import { ScrollView, FlatList } from 'react-native-gesture-handler';
-import {StyleSheet, Text, View, Platform, Dimensions, ActivityIndicator, requireNativeComponent } from "react-native";
-import Tweet from 'react-native-tweet-view';
+import {StyleSheet, Text, View, Platform, Dimensions, ActivityIndicator } from "react-native";
+import Card from '../../components/Card';
+import _ from 'lodash';
 
 
 import {
@@ -66,19 +67,19 @@ function StockPage({ route, navigation }) {
         fetch(`http://localhost:7890/1.1/search/tweets.json?q=${ticker}`).then(res => res.json())
         .then((result_) => {
             // Update the state of results array
-            setTweets(result_);
+            let array = _.flattenDeep( Array.from(result_.data['statuses']).map((tweet) => 
+            [{timePosted: tweet['created_at'], id: tweet['id'], text: tweet['text'], 
+            userName: tweet['user']['name'], userScreenName: tweet['user']['screen_name'], 
+            verified: tweet['user']['verified'], retweetCount: tweet['retweent_count'], 
+            favoriteCount: tweet['favorite_count']}]) );
+            setTweets(array);
+            console.log(tweets);
         }).catch(error => {
             console.log('found error', error)
           });
     }
     );
-    function Item({ idVal }) {
-        return (
-          <View>
-            <Tweet id='idVal' />
-          </View>
-        );
-      }
+
     if (!loaded){
         return (
             <View>
@@ -132,12 +133,11 @@ function StockPage({ route, navigation }) {
                     </Text>
                     
                     <Text style={styles_stock.titleText2_}>
-    
                         Volume: {Number(volume).toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
                     </Text>
                     <FlatList
                         data={tweets}
-                        renderItem={({ item }) => <Item idVal={item['id_str']} />}
+                        renderItem={({ item }) => <Card username={item.userName} text={item.text}/>}
                         keyExtractor={item => item['id']}
                     />
                 </ScrollView>
