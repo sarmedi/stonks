@@ -1,20 +1,16 @@
 import axios from 'axios';
 import React, { Component, useState, useEffect } from "react";
-import { ScrollView, FlatList } from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 import {StyleSheet, Text, View, Platform, Dimensions, ActivityIndicator } from "react-native";
-import { WebView } from "react-native-webview";
-import Card from '../../components/Card';
-import _ from 'lodash';
-
+import {WebView} from "react-native-webview";
 
 import {
     LineChart,
   } from 'react-native-chart-kit';
 import { useNavigation } from '@react-navigation/native';
 
-const labels_=['2020-04-07','2020-04-08','2020-04-09','2020-04-10', '2020-04-13','2020-04-14', '2020-04-15'];
-const formatted_labels = ['04/07','04/08','04/09','04/10', '04/13','04/14', '04/15'];
-
+const labels_=['2020-03-26','2020-03-27','2020-03-30','2020-03-31', '2020-04-01','2020-04-02', '2020-04-03'];
+const formatted_labels = ['03/26','03/27','03/30','03/31', '04/01','04/02', '04/03'];
 function StockPage({ route, navigation }) {
     const {ticker} = route.params;
     const [val, setVal] = useState('Time Series (Daily)');
@@ -27,10 +23,9 @@ function StockPage({ route, navigation }) {
     const [weekmax, setWeekMax] = useState('');
     const [weekmin, setWeekMin] = useState('');
     const [results, setResults] = useState([{}]);
-    const [tweets, setTweets] = useState([{}]);
     const [line, setLine] = useState({
             
-        labels: ['04-07','04-08','04-09','04-10', '04-13','04-14', '04-15'],
+        labels: ['03-26','03-27','03-30','03-31', '04-01','04-02', '04-03'],
         datasets: [
           {
             data: [0,0,0,0,0,0,0],
@@ -38,9 +33,9 @@ function StockPage({ route, navigation }) {
           },
         ],
       });
-    const [loaded, SetLoaded] = useState(false);
+    const [loaded, SetLoaded] =useState(false);
     useEffect(() =>{
-        fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=AH65IAC5WNPUR2JS`).then(res => res.json())
+        fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`).then(res => res.json())
         .then((result_) => {
             // Update the state of results array
             setResults(result_);
@@ -67,13 +62,9 @@ function StockPage({ route, navigation }) {
           });
     }
     );
-
     if (!loaded){
         return (
-            <View>
-                <ActivityIndicator size="large" color="#1A741D" />
-            </View>
-            
+            <ActivityIndicator size="large" color="#1A741D" />
         );
     }else{
         return (
@@ -82,10 +73,14 @@ function StockPage({ route, navigation }) {
                         {ticker}
                     </Text>
                     <Text style={styles_stock.titleText2}>
-                        Open: {open} | Close: {close}
+                        Close: {close}
                     </Text>
-
-                    <Text style={styles_stock.titleText3}>
+                    <Text style={styles_stock.titleText2}>
+                        Open: {open}
+                    </Text>
+                    <Text style={styles_stock.titleText2}>
+                    </Text>
+                    <Text style={styles_stock.titleText2}>
                         Past Week:
                     </Text>
                     <LineChart
@@ -113,38 +108,40 @@ function StockPage({ route, navigation }) {
                     <Text style={styles_stock.titleText3}>
                         Key Information [{formatted_labels[6]}]:
                     </Text>
+                    <Text style={styles_stock.titleText2}>
+                    </Text>
                     
                     <Text style={styles_stock.titleText2_}>
+    
                         Volume: {Number(volume).toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
                     </Text>
-
+                    <Text></Text>
                     <Text style={styles_stock.titleText3}>
                         Relevant Tweets:
                     </Text>
-                    <View style={{ height: 400 }}>
+                    <View style={{ height: 600, width: 400 }}>
                     <WebView
                       automaticallyAdjustContentInsets={false}
                       source={{uri: "https://twitter.com/search?q=%24"+ticker+"&src=typed_query&f=live"}}
                     />
                   </View>
+                    
                 </ScrollView>
         );
     }
     
     
 } export default StockPage
-
 var styles_stock = StyleSheet.create({
     titleText: {
       fontSize: 50,
       fontWeight: 'bold',
-      textAlign: "center",
+      textAlign: "left",
       color:'#1A741D'
     },
     titleText2: {
       fontSize: 25,
       fontWeight: 'bold',
-      textAlign: 'center'
     },
     titleText2_: {
         fontSize: 25,
@@ -161,3 +158,9 @@ var styles_stock = StyleSheet.create({
     }
   })
 
+
+
+
+
+
+  /**/
