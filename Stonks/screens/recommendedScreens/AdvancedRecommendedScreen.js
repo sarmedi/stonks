@@ -36,7 +36,7 @@ const DATA = [
     ticker: 'SUP'
   },
 ];
-
+//function to display a view for each ticker
 function Item({ title }) {
   return (
     /* Display the chart icon and the title of the stock */

@@ -6,9 +6,9 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import stockScreen from "./recommendedScreens/stockScreen"
 import { TabView } from 'react-native-tab-view';
 import StockPage from './recommendedScreens/stockScreen';
-
+//Creates the tab navigator for the different recommended screens: Beginner, Intermediate, and Advanced
 const Tab = createMaterialTopTabNavigator();
-const vara = "HRL";
+//Creates a tab navigator, and a tab screen for each level of stocks
 export default function myTabs() {
     return (
         /* Create the menu at the top of the page to switch between

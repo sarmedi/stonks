@@ -3,10 +3,12 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Dimensions, 
 import { ScrollView } from 'react-native-gesture-handler';
 import {Card, Button, Icon  }from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
-
+//Function for HomeScreen
 export default function HomeScreen() {
   const navigation = useNavigation();
+  //adds Navigation
   return (
+    //view to create cards and title.  Each card holds a link to the stock page and a picture of the company and the stock ticker
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 
@@ -59,7 +61,7 @@ export default function HomeScreen() {
     </View>
   );
 }
-
+//StyleSheet
 var styles_home = StyleSheet.create({
   titleText: {
     fontSize: 60,
@@ -90,9 +92,6 @@ var styles_home = StyleSheet.create({
 HomeScreen.navigationOptions = {
   header: null,
 };
-const labels_=['2020-03-26','2020-03-27','2020-03-30','2020-03-31', '2020-04-01','2020-04-02', '2020-04-03'];
-const formatted_labels = ['03/26','03/27','03/30','03/31', '04/01','04/02', '04/03'];
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

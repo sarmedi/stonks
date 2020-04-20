@@ -4,8 +4,10 @@ import { Ionicons } from '@expo/vector-icons';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 import { MonoText } from '../components/StyledText';
 
+//Function for the TutorialScreen component
 export default function TutorialScreen() {
     return (
+      //Contains a scroll view and images and text, along with more reading at the bottom complete with links.
         <ScrollView style={styles.container}>
           
             <Text style={styles.titleText}>
@@ -83,19 +85,30 @@ export default function TutorialScreen() {
               }}>
               <Text style={{
                 textDecorationLine: 'underline',
-              }}>
+              }}onPress={ ()=> Linking.openURL('https://www.marketreview.com/function-of-stock-markets/') }>
               {"Primary functions of the stock market"}
               {"\n"}
               {"\n"}
+              </Text>
+              <Text style={{
+                textDecorationLine: 'underline',
+              }}onPress={ ()=> Linking.openURL('https://www.nerdwallet.com/blog/investing/what-is-the-stock-market/') }>
               {"How does the stock market work?"}
               {"\n"}
               {"\n"}
+              </Text>
+              <Text style={{
+                textDecorationLine: 'underline',
+              }}onPress={ ()=> Linking.openURL('https://www.thestreet.com/static/25-rules.html') }>
               {"What are some rules of the stock market?"}
               {"\n"}
               {"\n"}
-              {"Who regulates stock markets?"}
               </Text>
-
+              <Text style={{
+                textDecorationLine: 'underline',
+              }}onPress={ ()=> Linking.openURL('https://www.thebalance.com/who-s-watching-your-back-in-stock-market-3141308') }>
+                {"Who regulates stock markets?"}
+              </Text>
             </View>
             
             <Text> {"\n"} {"\n"} </Text>
@@ -160,3 +173,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
+
+              
+              

@@ -11,7 +11,7 @@ import useLinking from './navigation/useLinking';
 import StockPage from './screens/recommendedScreens/stockScreen';
 
 const Stack = createStackNavigator();
-
+//App.js is used to set up navigation using React's built in stack navigator
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
   const [initialNavigationState, setInitialNavigationState] = React.useState();
@@ -43,7 +43,7 @@ export default function App(props) {
 
     loadResourcesAndDataAsync();
   }, []);
-
+//loading screen, or sends view to the home screen class.
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return null;
   } else {

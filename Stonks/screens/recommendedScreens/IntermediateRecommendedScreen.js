@@ -36,7 +36,7 @@ const DATA = [
     ticker: 'BEP'
   },
 ];
-
+//function to display ticker for each stock
 function Item({ title }) {
   return (
     /* Display the chart icon and the title of the stock */

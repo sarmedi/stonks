@@ -36,7 +36,7 @@ const DATA = [
     ticker: 'AAPL'
   },
 ];
-
+//function to display ticker for each stock
 function Item({ title }) {
   
   
