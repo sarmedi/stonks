@@ -36,13 +36,13 @@ const DATA = [
     ticker: 'SUP'
   },
 ];
-//function to display a view for each ticker
+//function to display ticker for each stock
 function Item({ title, ticker }) {
   const navigation = useNavigation();
   return (
     /* Display the chart icon and the title of the stock */
     <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Stock Page', {ticker: ticker})}>
-        <View><TabBarIcon style={{tintColor: '#fff'}} name="chart-line"/></View>
+        <View><TabBarIcon name="chart-line"/></View>
         <View><Text style={styles.title}>{title}</Text></View>
     </TouchableOpacity>
   );
@@ -54,7 +54,7 @@ export default function App() {
       {/* Create a list to show all 6 stocks */}
       <FlatList
         data={DATA}
-        renderItem={({ item }) => <Item title={item.title} />}
+        renderItem={({ item }) => <Item title={item.title} ticker={item.ticker} />}
         keyExtractor={item => item.id}
       />
     </SafeAreaView>
@@ -81,3 +81,4 @@ const styles = StyleSheet.create({
     color: '#fff',
   }
 });
+

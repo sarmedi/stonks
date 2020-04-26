@@ -54,7 +54,7 @@ export default function App() {
       {/* Create a list to show all 6 stocks */}
       <FlatList
         data={DATA}
-        renderItem={({ item }) => <Item title={item.title} />}
+        renderItem={({ item }) => <Item title={item.title} ticker={item.ticker}/>}
         keyExtractor={item => item.id}
       />
     </SafeAreaView>
