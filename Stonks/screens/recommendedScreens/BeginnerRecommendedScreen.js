@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, SafeAreaView, Text, View, Linking, LayoutAnimation, Platform, UIManager, TouchableOpacity } from 'react-native';
 import TabBarIcon from '../../components/TabBarIcon';
 import { FlatList } from 'react-native-gesture-handler';
-
+import { useNavigation } from '@react-navigation/native';
 // Beginner-level stocks
 const DATA = [
   {
@@ -37,15 +37,14 @@ const DATA = [
   },
 ];
 //function to display ticker for each stock
-function Item({ title }) {
-  
-  
+function Item({ title, ticker }) {
+  const navigation = useNavigation();
   return (
     /* Display the chart icon and the title of the stock */
-    <View style={styles.item}>
+    <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Stock Page', {ticker: ticker})}>
         <View><TabBarIcon name="chart-line"/></View>
         <View><Text style={styles.title}>{title}</Text></View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -55,7 +54,7 @@ export default function App() {
       {/* Create a list to show all 6 stocks */}
       <FlatList
         data={DATA}
-        renderItem={({ item }) => <Item title={item.title} />}
+        renderItem={({ item }) => <Item title={item.title} ticker={item.ticker} />}
         keyExtractor={item => item.id}
       />
     </SafeAreaView>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, Text, View, Linking} from 'react-native';
 import TabBarIcon from '../../components/TabBarIcon';
-import { FlatList } from 'react-native-gesture-handler';
-
+import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 // Expert-level stocks
 const DATA = [
   {
@@ -37,13 +37,14 @@ const DATA = [
   },
 ];
 //function to display a view for each ticker
-function Item({ title }) {
+function Item({ title, ticker }) {
+  const navigation = useNavigation();
   return (
     /* Display the chart icon and the title of the stock */
-    <View style={styles.item}>
+    <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Stock Page', {ticker: ticker})}>
         <View><TabBarIcon style={{tintColor: '#fff'}} name="chart-line"/></View>
         <View><Text style={styles.title}>{title}</Text></View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
