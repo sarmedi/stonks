@@ -32,13 +32,13 @@ export default function HomeScreen() {
             image={require('../assets/images/Apple_gray_logo.png')}>
             <Button
     icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
+    buttonStyle={{backgroundColor: '#1A741D', width: 110, borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
     onPress={() => navigation.navigate('Stock Page', {ticker: "AAPL"})}
     title='View     ' />
           
           <Button
     icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+    buttonStyle={{backgroundColor: '#1A741D', width: 110, borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
     onPress={() => navigation.navigate('Predictions Page', {ticker: "AAPL"})}
     title='Predictions' />
           </Card>
@@ -47,12 +47,12 @@ export default function HomeScreen() {
             image={require('../assets/images/msft_logo_crop.jpg')}>
             <Button
     icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
+    buttonStyle={{backgroundColor: '#1A741D', width: 110, borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
     onPress={() => navigation.navigate('Stock Page', {ticker: "MSFT"})}
     title='View     ' />
           <Button
     icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+    buttonStyle={{backgroundColor: '#1A741D', width: 110, borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
     onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
     title='Predictions' />
           </Card>
@@ -61,12 +61,12 @@ export default function HomeScreen() {
             image={require('../assets/images/image-20150902-6700-t2axrz.jpg')}>
             <Button
     icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
+    buttonStyle={{backgroundColor: '#1A741D', width: 110, borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
     onPress={() => navigation.navigate('Stock Page', {ticker: "GOOGL"})}
     title='View     ' />
           <Button
     icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+    buttonStyle={{backgroundColor: '#1A741D', width: 110, borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
     onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
     title='Predictions' />
           </Card>
