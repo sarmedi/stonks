@@ -25,7 +25,7 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
 
-          <Text style={styles_home.titleTextA}>{"\n"}{"\n"}Today's Recommended</Text>
+          <Text style={styles_home.titleTextA}>{"\n"}Today's Recommended</Text>
           <Text></Text>
           <Card
             title='AAPL'

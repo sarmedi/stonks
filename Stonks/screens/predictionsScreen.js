@@ -35,7 +35,7 @@ function PredictionsPage({ route, navigation }) {
                   </Text>
                   <Text></Text>
                   <View style={styles_stock.codeHighlightContainer}>
-                    <Text> Add Code for Tutorial Screen</Text>
+                    <Text> In order to study trends in stock market prices we use moving averages. First, we calculate the moving average over the past 50 days and the moving average over the past 200 days. If the most recent 50 day average is greater than the 200 day average, then the stock value has an increasing trend. If the 50 day average is less than the 200 day average, then the stock value has a decreasing trend.</Text>
                   </View>
               </ScrollView>
       );
