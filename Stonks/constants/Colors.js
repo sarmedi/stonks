@@ -1,5 +1,5 @@
 const tintColor = '#fff';
-
+//sets some color values that can be called from any class
 export default {
   tintColor,
   tabIconDefault: '#D2D2D2',

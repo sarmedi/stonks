@@ -13,7 +13,7 @@ export default function BottomTabNavigator({ navigation, route }) {
   // currently active tab. Learn more in the documentation:
   // https://reactnavigation.org/docs/en/screen-options-resolution.html
   navigation.setOptions({ headerTitle: getHeaderTitle(route), headerTintColor: '#fff', headerStyle: {backgroundColor: '#1A741D',} });
-
+//Has a link to each screen that we created, to display it in the main screen of the app
   return (
     <BottomTab.Navigator 
       initialRouteName={INITIAL_ROUTE_NAME}

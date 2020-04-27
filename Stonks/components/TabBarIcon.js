@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Colors from '../constants/Colors';
-
+//Function for displaying the icons in the tab bar at the bottom.
 export default function TabBarIcon(props) {
   return (
     <MaterialCommunityIcons

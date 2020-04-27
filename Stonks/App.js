@@ -9,9 +9,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
 import StockPage from './screens/recommendedScreens/stockScreen';
-
+import PredictionsPage from './screens/predictionsScreen';
 const Stack = createStackNavigator();
-
+//App.js is used to set up navigation using React's built in stack navigator
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
   const [initialNavigationState, setInitialNavigationState] = React.useState();
@@ -43,7 +43,7 @@ export default function App(props) {
 
     loadResourcesAndDataAsync();
   }, []);
-
+//loading screen, or sends view to the home screen class.
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return null;
   } else {
@@ -54,6 +54,7 @@ export default function App(props) {
           <Stack.Navigator>
             <Stack.Screen name=" " component={BottomTabNavigator} />
             <Stack.Screen name="Stock Page" component={StockPage} />
+            <Stack.Screen name="Predictions Page" component={PredictionsPage} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
