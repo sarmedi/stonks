@@ -10,6 +10,8 @@ import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
 import StockPage from './screens/recommendedScreens/stockScreen';
 import PredictionsPage from './screens/predictionsScreen';
+import LinksScreen from './screens/predictionsScreen';
+import HomeScreen from './screens/predictionsScreen';
 const Stack = createStackNavigator();
 //App.js is used to set up navigation using React's built in stack navigator
 export default function App(props) {
