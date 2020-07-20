@@ -165,8 +165,6 @@ var styles_stock = StyleSheet.create({
       backgroundColor: '#fafafa'              
     }
   })
-  const labels_=['2020-04-06','2020-04-07','2020-04-08','2020-04-09', '2020-04-13','2020-04-14', '2020-04-15'];
-  const formatted_labels = ['04/06','04/07','04/08','04/09', '04/13','04/14', '04/15'];
 
 
 
