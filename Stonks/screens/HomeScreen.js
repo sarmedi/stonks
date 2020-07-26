@@ -28,18 +28,6 @@ elevation: 24,}}>
         />
         <Text style={styles_home.titleText}>Stonks</Text>
         
-        <ScrollView style={styles.container} >
-
-        
-
-          <Text style={styles_home.titleText}>$tonks</Text>
-          <Image
-            source={
-               require('../assets/images/app_icon.png')
-            }
-            style={styles.welcomeImage}
-          />
-        </ScrollView>
         <Text style={styles_home.titleTextA}>{"\n"}Recommended Stocks</Text>
         <Text></Text>
         <View style={styles_home.carouselContainer}>
