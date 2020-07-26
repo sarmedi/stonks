@@ -10,79 +10,91 @@ export default function HomeScreen() {
   return (
     //view to create cards and title.  Each card holds a link to the stock page and a picture of the company and the stock ticker
     <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+      <View style={{shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 12,
+},
+shadowOpacity: 0.58,
+shadowRadius: 16.00,
+flex: 1,
+    backgroundColor: '#fff',
+elevation: 24,}}>
+      <Image
+          source={
+            require('../assets/images/app_icon.png')
+          }
+          style={{position: "absolute", left: 10, right: 14, width: 44, height:44,top:7}}
+        />
+        <Text style={styles_home.titleText}>Stonks</Text>
+        
+        <ScrollView style={styles.container} >
 
-        <View style={styles.getStartedContainer}>
-
-          <Text style={styles_home.titleText}>$tonks</Text>
-          <Image
-            source={
-               require('../assets/images/app_icon.png')
-            }
-            style={styles.welcomeImage}
-          />
-        </View>
-
-        <View style={styles.getStartedContainer}>
-
-          <Text style={styles_home.titleTextA}>{"\n"}Today's Recommended</Text>
-          <Text></Text>
-          <Card
-            title='AAPL'
-            image={require('../assets/images/Apple_gray_logo.png')}>
-            <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
-    onPress={() => navigation.navigate('Stock Page', {ticker: "AAPL"})}
-    title='View     ' />
-          
-          <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
-    onPress={() => navigation.navigate('Predictions Page', {ticker: "AAPL"})}
-    title='Predictions' />
-          </Card>
-          <Card
-            title='MSFT'
-            image={require('../assets/images/msft_logo_crop.jpg')}>
-            <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
-    onPress={() => navigation.navigate('Stock Page', {ticker: "MSFT"})}
-    title='View     ' />
-          <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
-    onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
-    title='Predictions' />
-          </Card>
-          <Card
-            title="GOOGL"
-            image={require('../assets/images/image-20150902-6700-t2axrz.jpg')}>
-            <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
-    onPress={() => navigation.navigate('Stock Page', {ticker: "GOOGL"})}
-    title='View     ' />
-          <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
-    onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
-    title='Predictions' />
-          </Card>
-        </View>
         
 
-      </ScrollView>
+<View style={styles.getStartedContainer}>
+
+  <Text style={styles_home.titleTextA}>{"\n"}Today's Recommended</Text>
+  <Text></Text>
+  <Card
+    title='AAPL'
+    image={require('../assets/images/Apple_gray_logo.png')}>
+    <Button
+icon={<Icon name='code' color='#ffffff' />}
+buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
+onPress={() => navigation.navigate('Stock Page', {ticker: "AAPL"})}
+title='View     ' />
+  
+  <Button
+icon={<Icon name='code' color='#ffffff' />}
+buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+onPress={() => navigation.navigate('Predictions Page', {ticker: "AAPL"})}
+title='Predictions' />
+  </Card>
+  <Card
+    title='MSFT'
+    image={require('../assets/images/msft_logo_crop.jpg')}>
+    <Button
+icon={<Icon name='code' color='#ffffff' />}
+buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
+onPress={() => navigation.navigate('Stock Page', {ticker: "MSFT"})}
+title='View     ' />
+  <Button
+icon={<Icon name='code' color='#ffffff' />}
+buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
+title='Predictions' />
+  </Card>
+  <Card
+    title="GOOGL"
+    image={require('../assets/images/image-20150902-6700-t2axrz.jpg')}>
+    <Button
+icon={<Icon name='code' color='#ffffff' />}
+buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
+onPress={() => navigation.navigate('Stock Page', {ticker: "GOOGL"})}
+title='View     ' />
+  <Button
+icon={<Icon name='code' color='#ffffff' />}
+buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
+title='Predictions' />
+  </Card>
+</View>
+
+
+</ScrollView>
+      </View>
+      
     </View>
   );
 }
 //StyleSheet
 var styles_home = StyleSheet.create({
   titleText: {
-    fontSize: 60,
+    fontSize: 62,
     fontWeight: 'bold',
     color: '#1A741D',
+    left:56,
   },
   titleText2: {
     fontSize: 40,
@@ -112,6 +124,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+
   },
   homeContainer: {
     flex: 1,
@@ -132,13 +145,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 20,
   },
-  welcomeImage: {
-    width: 200,
-    height: 100,
-    resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
-  },
+
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
@@ -191,12 +198,5 @@ const styles = StyleSheet.create({
   helpContainer: {
     marginTop: 15,
     alignItems: 'center',
-  },
-  helpLink: {
-    paddingVertical: 15,
-  },
-  helpLinkText: {
-    fontSize: 14,
-    color: '#2e78b7',
   },
 });

@@ -12,6 +12,11 @@ import StockPage from './screens/recommendedScreens/stockScreen';
 import PredictionsPage from './screens/predictionsScreen';
 import LinksScreen from './screens/predictionsScreen';
 import HomeScreen from './screens/predictionsScreen';
+import {
+  setCustomText
+} from 'react-native-global-props'
+
+
 const Stack = createStackNavigator();
 //App.js is used to set up navigation using React's built in stack navigator
 export default function App(props) {
@@ -32,12 +37,19 @@ export default function App(props) {
         // Load fonts
         await Font.loadAsync({
           ...Ionicons.font,
-          'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+          'san-francisco': require('./assets/fonts/SFProDisplay-Regular.ttf'),
+        }).then(() => {
+          setCustomText({
+            style: {
+              fontFamily: 'san-francisco'
+            }
+          })
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
         console.warn(e);
       } finally {
+        
         setLoadingComplete(true);
         SplashScreen.hide();
       }
@@ -51,9 +63,11 @@ export default function App(props) {
   } else {
     return (
       <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+        {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator>
+          <Stack.Navigator
+           
+          >
             <Stack.Screen name=" " component={BottomTabNavigator} />
             <Stack.Screen name="Stock Page" component={StockPage} />
             <Stack.Screen name="Predictions Page" component={PredictionsPage} />
