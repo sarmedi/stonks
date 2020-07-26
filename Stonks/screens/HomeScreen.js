@@ -22,56 +22,62 @@ export default function HomeScreen() {
             style={styles.welcomeImage}
           />
         </View>
-
-        <View style={styles.getStartedContainer}>
-
-          <Text style={styles_home.titleTextA}>{"\n"}Today's Recommended</Text>
-          <Text></Text>
-          <Card
-            title='AAPL'
-            image={require('../assets/images/Apple_gray_logo.png')}>
-            <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
-    onPress={() => navigation.navigate('Stock Page', {ticker: "AAPL"})}
-    title='View     ' />
+        <Text style={styles_home.titleTextA}>{"\n"}Recommended Stocks</Text>
+        <Text></Text>
+        <View style={styles_home.carouselContainer}>
+            <ScrollView style={styles_home.scrollWheel}
+                        horizontal={true}
+                        contentContainerStyle={{ width: `${100 * 3}%` }}
+                        showsHorizontalScrollIndicator={false}
+                        scrollEventThrottle={200}
+                        decelerationRate="fast"
+                        pagingEnabled>
+              <Card
+                title='AAPL'
+                image={require('../assets/images/Apple_gray_logo.png')}>
+                <Button
+                  icon={<Icon name='code' color='#ffffff' />}
+                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 45, marginRight: 45, marginBottom: 10}}
+                  onPress={() => navigation.navigate('Stock Page', {ticker: "AAPL"})}
+                  title='View     ' />
           
-          <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
-    onPress={() => navigation.navigate('Predictions Page', {ticker: "AAPL"})}
-    title='Predictions' />
-          </Card>
-          <Card
-            title='MSFT'
-            image={require('../assets/images/msft_logo_crop.jpg')}>
-            <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
-    onPress={() => navigation.navigate('Stock Page', {ticker: "MSFT"})}
-    title='View     ' />
-          <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
-    onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
-    title='Predictions' />
-          </Card>
-          <Card
-            title="GOOGL"
-            image={require('../assets/images/image-20150902-6700-t2axrz.jpg')}>
-            <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
-    onPress={() => navigation.navigate('Stock Page', {ticker: "GOOGL"})}
-    title='View     ' />
-          <Button
-    icon={<Icon name='code' color='#ffffff' />}
-    buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
-    onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
-    title='Predictions' />
-          </Card>
+                <Button
+                  icon={<Icon name='code' color='#ffffff' />}
+                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 45, marginRight: 45, marginBottom: 0}}
+                  onPress={() => navigation.navigate('Predictions Page', {ticker: "AAPL"})}
+                  title='Predictions' />
+              </Card>
+              <Card
+                 title='MSFT'
+                  image={require('../assets/images/msft_logo_crop.jpg')}>
+                <Button
+                  icon={<Icon name='code' color='#ffffff' />}
+                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 45, marginRight: 45, marginBottom: 10}}
+                  onPress={() => navigation.navigate('Stock Page', {ticker: "MSFT"})}
+                  title='View     ' />
+                <Button
+                  icon={<Icon name='code' color='#ffffff' />}
+                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 45, marginRight: 45, marginBottom: 0}}
+                  onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
+                  title='Predictions' />
+                </Card>
+              <Card
+                title="GOOGL"
+                image={require('../assets/images/image-20150902-6700-t2axrz.jpg')}>
+                <Button
+                  icon={<Icon name='code' color='#ffffff' />}
+                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
+                  onPress={() => navigation.navigate('Stock Page', {ticker: "GOOGL"})}
+                  title='View     ' />
+                <Button
+                  icon={<Icon name='code' color='#ffffff' />}
+                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
+                  onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
+                  title='Predictions' />
+              </Card>
+            </ScrollView>
         </View>
-        
+        <Text></Text>
 
       </ScrollView>
     </View>
@@ -91,7 +97,14 @@ var styles_home = StyleSheet.create({
   titleText3: {
     fontSize: 35,
     fontWeight: 'bold',
-    
+  },
+  carouselContainer:{
+    paddingBottom: 15,
+    alignItems: 'center',
+    backgroundColor: 'lightgray',
+  },
+  scrollWheel:{
+    width: 300,
   },
   homePage: {
     backgroundColor: '#fafafa'              
@@ -111,6 +124,7 @@ HomeScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "column",
     backgroundColor: '#fff',
   },
   homeContainer: {
