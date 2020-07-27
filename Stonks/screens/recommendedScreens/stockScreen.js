@@ -11,6 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const labels_=['2020-04-17','2020-04-20','2020-04-21','2020-04-22', '2020-04-23','2020-04-24', '2020-04-27'];
 const formatted_labels = ['04/17','04/20','04/21','04/22', '04/23','04/24', '04/27'];
+const new_api="bsf234vrh5rf0ieh0g2g";
 function StockPage({ route, navigation }) {
   //Default values and functions to modify the variables for holding data
     const {ticker} = route.params;

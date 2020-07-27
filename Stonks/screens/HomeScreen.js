@@ -1,11 +1,23 @@
-import * as React from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Dimensions, } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import {Card, Button, Icon  }from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 //Function for HomeScreen
+
 export default function HomeScreen() {
   const navigation = useNavigation();
+  const [results, setResults] = useState([{}]);
+  useEffect(()=>{
+    fetch("https://finnhub.io/api/v1/news?category=general&token=bsf234vrh5rf0ieh0g2g").then(res => res.json())
+    .then((result_) =>{
+        setResults(result_);
+        console.log(result_)
+    }).catch(error => {
+      console.log('finnhub error', error)
+    });
+
+  });
   //adds Navigation
   return (
     //view to create cards and title.  Each card holds a link to the stock page and a picture of the company and the stock ticker
@@ -81,6 +93,8 @@ elevation: 24,}}>
                   onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
                   title='Predictions' />
               </Card>
+
+
             </ScrollView>
         </View>
         <Text></Text>
