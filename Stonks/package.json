@@ -23,6 +23,7 @@
     "chartjs-plugin-annotation": "^0.5.7",
     "expo": "~36.0.0",
     "expo-asset": "~8.0.0",
+    "expo-cli": "^3.22.3",
     "expo-constants": "~8.0.0",
     "expo-font": "~8.0.0",
     "expo-web-browser": "~8.0.0",
