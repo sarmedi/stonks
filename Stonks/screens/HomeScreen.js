@@ -1,7 +1,7 @@
 import React, {Component, useState, useEffect} from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Dimensions, } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import {Card, Button, Icon  }from 'react-native-elements';
+import {Card, Button, Icon, withTheme  }from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 import styled from 'styled-components';
 //Function for HomeScreen
@@ -13,9 +13,9 @@ export default function HomeScreen() {
     fetch("https://finnhub.io/api/v1/news?category=general&token=bsf234vrh5rf0ieh0g2g").then(res => res.json())
     .then((result_) =>{
         setResults(result_);
-        console.log(result_)
+        //console.log(result_)
     }).catch(error => {
-      console.log('finnhub error', error)
+      //console.log('finnhub error', error)
     });
 
   });
@@ -51,49 +51,64 @@ elevation: 24,}}>
                         scrollEventThrottle={200}
                         decelerationRate="fast"
                         pagingEnabled>
-              <Card
-                title='AAPL'
-                image={require('../assets/images/Apple_gray_logo.png')}>
-                <Button
-                  icon={<Icon name='code' color='#ffffff' />}
-                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 45, marginRight: 45, marginBottom: 10}}
+                            
+              <View style={styles_home.stockCard}>
+                <View style={styles_home.cardTop}>
+                  <Image style={styles_home.cardImage} source={require('../assets/images/Apple_gray_logo.png')}/>
+                </View>
+                <TouchableOpacity
+                  style={styles_home.cardButton}
                   onPress={() => navigation.navigate('Stock Page', {ticker: "AAPL"})}
-                  title='View     ' />
-          
-                <Button
-                  icon={<Icon name='code' color='#ffffff' />}
-                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 45, marginRight: 45, marginBottom: 0}}
+                  title='View     '>
+                    <Icon name='code' color='#ffffff' />
+                    <Text style={styles_home.cardText}> View </Text>
+                  </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles_home.cardButton}
                   onPress={() => navigation.navigate('Predictions Page', {ticker: "AAPL"})}
-                  title='Predictions' />
-              </Card>
-              <Card
-                 title='MSFT'
-                  image={require('../assets/images/msft_logo_crop.jpg')}>
-                <Button
-                  icon={<Icon name='code' color='#ffffff' />}
-                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 45, marginRight: 45, marginBottom: 10}}
+                  title='Predictions     '>
+                    <Icon name='code' color='#ffffff' />
+                    <Text style={styles_home.cardText}> Predictions </Text>
+                  </TouchableOpacity>
+              </View>
+              <View style={styles_home.stockCard}>
+                <View style={styles_home.cardTop}>
+                  <Image style={styles_home.cardImage} source={require('../assets/images/msft_logo_crop.jpg')}/>
+                </View>
+                <TouchableOpacity
+                  style={styles_home.cardButton}
                   onPress={() => navigation.navigate('Stock Page', {ticker: "MSFT"})}
-                  title='View     ' />
-                <Button
-                  icon={<Icon name='code' color='#ffffff' />}
-                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 45, marginRight: 45, marginBottom: 0}}
+                  title='View     '>
+                    <Icon name='code' color='#ffffff' />
+                    <Text style={styles_home.cardText}> View </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles_home.cardButton}
                   onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
-                  title='Predictions' />
-                </Card>
-              <Card
-                title="GOOGL"
-                image={require('../assets/images/image-20150902-6700-t2axrz.jpg')}>
-                <Button
-                  icon={<Icon name='code' color='#ffffff' />}
-                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 10}}
+                  title='Predictions     '>
+                    <Icon name='code' color='#ffffff' />
+                    <Text style={styles_home.cardText}> Predictions </Text>
+                  </TouchableOpacity>
+                </View>
+              <View style={styles_home.stockCard}>
+                <View style={styles_home.cardTop}>
+                  <Image style={styles_home.cardImage} source={require('../assets/images/google-icon.jpg')}/>
+                </View>
+                <TouchableOpacity
+                  style={styles_home.cardButton}
                   onPress={() => navigation.navigate('Stock Page', {ticker: "GOOGL"})}
-                  title='View     ' />
-                <Button
-                  icon={<Icon name='code' color='#ffffff' />}
-                  buttonStyle={{backgroundColor: '#1A741D', borderRadius: 0, marginLeft: 75, marginRight: 75, marginBottom: 0}}
-                  onPress={() => navigation.navigate('Predictions Page', {ticker: "MSFT"})}
-                  title='Predictions' />
-              </Card>
+                  title='View     '>
+                    <Icon name='code' color='#ffffff' />
+                    <Text style={styles_home.cardText}> View </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles_home.cardButton}
+                  onPress={() => navigation.navigate('Predictions Page', {ticker: "GOOGL"})}
+                  title='Predictions     '>
+                    <Icon name='code' color='#ffffff' />
+                    <Text style={styles_home.cardText}> Predictions </Text>
+                  </TouchableOpacity>
+              </View>
 
 
             </ScrollView>
@@ -106,15 +121,57 @@ elevation: 24,}}>
   );
 }
 
-//Styled Components
-const Title = styled.Text`
-	font-size: 20px;
-	font-weight: 500;
-	color: palevioletred;
-`;
 
 //StyleSheet
 var styles_home = StyleSheet.create({
+  stockCard: {
+    backgroundColor: 'white',
+    height: 350,
+    width: 250,
+    borderRadius: 14,
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 62.5,
+    marginRight: 62.5,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+
+    elevation: 12,
+  },
+  cardTop: {
+    width: '100%',
+    height: 225,
+    borderTopLeftRadius: 14,
+    borderTopRightRadius: 14,
+    overflow: 'hidden',
+  },
+  cardImage: {
+    width: '100%',
+    height: '100%',
+  },
+  cardButton:{
+    backgroundColor: '#1A741D',
+    width: 160,
+    alignItems: 'center',
+    paddingVertical: 8,
+    justifyContent: 'center',
+    flexDirection: "row",
+    borderRadius: 5,
+    marginTop: 16,
+    marginLeft: 45,
+    marginRight: 45,
+    marginBottom: 0,
+  } ,
+  cardText:{
+    fontSize: 20,
+    color: 'white',
+    textAlign: 'center',
+  },
   titleText: {
     fontSize: 62,
     fontWeight: 'bold',
@@ -132,10 +189,10 @@ var styles_home = StyleSheet.create({
   carouselContainer:{
     paddingBottom: 15,
     alignItems: 'center',
-    backgroundColor: 'lightgray',
+    backgroundColor: 'white',
   },
   scrollWheel:{
-    width: 300,
+    width: 375,
   },
   homePage: {
     backgroundColor: '#fafafa'              
