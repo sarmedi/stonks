@@ -3,6 +3,7 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Dimensions, 
 import { ScrollView } from 'react-native-gesture-handler';
 import {Card, Button, Icon  }from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
+import styled from 'styled-components';
 //Function for HomeScreen
 
 export default function HomeScreen() {
@@ -104,6 +105,14 @@ elevation: 24,}}>
     </View>
   );
 }
+
+//Styled Components
+const Title = styled.Text`
+	font-size: 20px;
+	font-weight: 500;
+	color: palevioletred;
+`;
+
 //StyleSheet
 var styles_home = StyleSheet.create({
   titleText: {
