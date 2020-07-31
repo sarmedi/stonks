@@ -1,9 +1,10 @@
 import React, {Component, useState, useEffect} from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Dimensions, } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Dimensions, Linking} from 'react-native';
+import { ScrollView, FlatList } from 'react-native-gesture-handler';
 import {Card, Button, Icon, withTheme  }from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 import styled from 'styled-components';
+import _ from 'lodash';
 //Function for HomeScreen
 
 export default function HomeScreen() {
@@ -15,12 +16,13 @@ export default function HomeScreen() {
         setResults(result_);
         //console.log(result_)
     }).catch(error => {
-      //console.log('finnhub error', error)
+      console.log('finnhub error', error)
     });
-
   });
   //adds Navigation
+
   return (
+    
     //view to create cards and title.  Each card holds a link to the stock page and a picture of the company and the stock ticker
     <View style={styles.container}>
       <View style={{shadowColor: "#000",
@@ -110,11 +112,30 @@ elevation: 24,}}>
                   </TouchableOpacity>
               </View>
 
+            </ScrollView>
+            <View></View>
+            <ScrollView horizontal={false}>
+            <View>
+                <Text style={styles_home.titleTextA}>
+                {"\n"}News
+                </Text>
+                <FlatList
+                  data={results}
+                  renderItem= {({item}) =>
+                  <View style= {styles_home.newsCard}> 
+                      <Image style={{position: "absolute", left: 5, right: 5, width: 80, height:80,top:5, bottom:5}} source={{uri: item.image }}/>
+                      <Text>{item.headline}</Text>
+                      <Text onPress={()=> Linking.openURL(item.url)}>Read More</Text>
+                  </View>
+                  }
+                  keyExtractor={item => item.id}
+                />
 
+              </View>
             </ScrollView>
         </View>
         <Text></Text>
-
+          
       </View>
       
     </View>
@@ -204,6 +225,33 @@ var styles_home = StyleSheet.create({
     fontStyle: 'italic',
     color: '#1A741D',
   },
+  newsCard: {
+    backgroundColor: 'white',
+    height: 100,
+    width: 350,
+    borderRadius: 14,
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 30,
+    marginRight: 30,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+
+    elevation: 12,
+  },
+  imageNews: {
+    height:80,
+    width: 80,
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 5,
+    marginBottom: 5,
+  }
 })
 
 HomeScreen.navigationOptions = {
