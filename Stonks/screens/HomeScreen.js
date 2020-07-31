@@ -14,7 +14,7 @@ export default function HomeScreen() {
     fetch("https://finnhub.io/api/v1/news?category=general&token=bsf234vrh5rf0ieh0g2g").then(res => res.json())
     .then((result_) =>{
         setResults(result_);
-        //console.log(result_)
+        console.log(result_)
     }).catch(error => {
       console.log('finnhub error', error)
     });
@@ -113,27 +113,27 @@ elevation: 24,}}>
               </View>
 
             </ScrollView>
-            <View></View>
-            <ScrollView horizontal={false}>
-            <View>
-                <Text style={styles_home.titleTextA}>
-                {"\n"}News
+            
+        </View>
+        <View>
+                <Text style={styles_home.titleTextA}>News
                 </Text>
                 <FlatList
-                  data={results}
+                  horizontal={true}
+                  showsHorizontalScrollIndicator={false}
+                  data={results.slice(0,10)}
                   renderItem= {({item}) =>
-                  <View style= {styles_home.newsCard}> 
-                      <Image style={{position: "absolute", left: 5, right: 5, width: 80, height:80,top:5, bottom:5}} source={{uri: item.image }}/>
-                      <Text>{item.headline}</Text>
-                      <Text onPress={()=> Linking.openURL(item.url)}>Read More</Text>
+                  <View style= {styles_home.newsCard} onPress={()=> Linking.openURL(item.url)}> 
+                      <Image style={{position: "absolute", left: 10, right: 10, width: 90, height:90,top:10, bottom:10, borderRadius: 14}} source={{uri: item.image }}/>
+                      <Text style={{left: 110, top:10, width: 150, color:"#1A741D", fontSize: 18}}>{item.headline}</Text>
+                      <Text style={{left: 110, top:12, width: 150, height:60, color:"#b3b3b3", fontSize: 14}}>{item.summary}</Text>
+                      <Text style= {{left:110, top:12, fontSize:18}}onPress={()=> Linking.openURL(item.url)}>Read More</Text>
                   </View>
                   }
                   keyExtractor={item => item.id}
                 />
 
               </View>
-            </ScrollView>
-        </View>
         <Text></Text>
           
       </View>
@@ -208,7 +208,7 @@ var styles_home = StyleSheet.create({
     fontWeight: 'bold',
   },
   carouselContainer:{
-    paddingBottom: 15,
+    paddingBottom: 0,
     alignItems: 'center',
     backgroundColor: 'white',
   },
@@ -227,10 +227,10 @@ var styles_home = StyleSheet.create({
   },
   newsCard: {
     backgroundColor: 'white',
-    height: 100,
-    width: 350,
+    height: 190,
+    width: 300,
     borderRadius: 14,
-    marginTop: 20,
+    marginTop: 15,
     marginBottom: 20,
     marginLeft: 30,
     marginRight: 30,
