@@ -6,7 +6,8 @@ import { useNavigation } from '@react-navigation/native';
 import styled from 'styled-components';
 import _ from 'lodash';
 //Function for HomeScreen
-
+const height=Dimensions.get('screen').height;
+const width=Dimensions.get('screen').width;
 export default function HomeScreen() {
   const navigation = useNavigation();
   const [results, setResults] = useState([{}]);
@@ -42,7 +43,9 @@ elevation: 24,}}>
           style={{position: "absolute", left: 10, right: 14, width: 44, height:44,top:7}}
         />
         <Text style={styles_home.titleText}>Stonks</Text>
-        
+        <ScrollView
+          showsVerticalScrollIndicator = {false}
+        >
         <Text style={styles_home.titleTextA}>{"\n"}Recommended Stocks</Text>
         <Text></Text>
         <View style={styles_home.carouselContainer}>
@@ -119,14 +122,11 @@ elevation: 24,}}>
                 <Text style={styles_home.titleTextA}>News
                 </Text>
                 <FlatList
-                  horizontal={true}
-                  showsHorizontalScrollIndicator={false}
                   data={results.slice(0,10)}
                   renderItem= {({item}) =>
                   <View style= {styles_home.newsCard} onPress={()=> Linking.openURL(item.url)}> 
-                      <Image style={{position: "absolute", left: 10, right: 10, width: 90, height:90,top:10, bottom:10, borderRadius: 14}} source={{uri: item.image }}/>
-                      <Text style={{left: 110, top:10, width: 150, color:"#1A741D", fontSize: 18}}>{item.headline}</Text>
-                      <Text style={{left: 110, top:12, width: 150, height:60, color:"#b3b3b3", fontSize: 14}}>{item.summary}</Text>
+                      <Image style={{position: "absolute", left: 10, right: 10, width: height*0.08, height:height*0.08,top:10, bottom:10, borderRadius: 14}} source={{uri: item.image }}/>
+                      <Text style={{left: 110, top:10, width: width*0.6, color:"#1A741D", fontSize: 18}}>{item.headline}</Text>
                       <Text style= {{left:110, top:12, fontSize:18}}onPress={()=> Linking.openURL(item.url)}>Read More</Text>
                   </View>
                   }
@@ -135,13 +135,16 @@ elevation: 24,}}>
 
               </View>
         <Text></Text>
+        </ScrollView>
           
       </View>
       
     </View>
   );
 }
+/*
 
+*/
 
 //StyleSheet
 var styles_home = StyleSheet.create({
@@ -208,7 +211,7 @@ var styles_home = StyleSheet.create({
     fontWeight: 'bold',
   },
   carouselContainer:{
-    paddingBottom: 0,
+    paddingBottom: 10,
     alignItems: 'center',
     backgroundColor: 'white',
   },
@@ -227,13 +230,12 @@ var styles_home = StyleSheet.create({
   },
   newsCard: {
     backgroundColor: 'white',
-    height: 190,
-    width: 300,
+    height: height*0.1,
+    width: width*0.9,
     borderRadius: 14,
-    marginTop: 15,
-    marginBottom: 20,
-    marginLeft: 30,
-    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    marginLeft: width*0.05,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -244,14 +246,6 @@ var styles_home = StyleSheet.create({
 
     elevation: 12,
   },
-  imageNews: {
-    height:80,
-    width: 80,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 5,
-    marginBottom: 5,
-  }
 })
 
 HomeScreen.navigationOptions = {

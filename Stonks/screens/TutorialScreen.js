@@ -1,34 +1,33 @@
 import * as React from 'react';
-import { Image, StyleSheet, SafeAreaView, Text, View, Linking, LayoutAnimation, Platform, UIManager, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, SafeAreaView, Text, View, Linking, LayoutAnimation, Platform, UIManager, TouchableOpacity, Dimensions} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 import { MonoText } from '../components/StyledText';
-
+const height=Dimensions.get('screen').height;
+const width=Dimensions.get('screen').width;
 //Function for the TutorialScreen component
 export default function TutorialScreen() {
     return (
       //Contains a scroll view and images and text, along with more reading at the bottom complete with links.
-        <ScrollView style={styles.container}>
-          
-            <Text style={styles.titleText}>
+      <ScrollView style={styles.scrollWheel}
+            horizontal={true}
+            contentContainerStyle={{ width: `80%` }}
+            showsHorizontalScrollIndicator={false}
+            scrollEventThrottle={200}
+            decelerationRate="fast"
+            pagingEnabled>
+              <Text style= {{position: "absolute",justifyContent: 'center', paddingLeft: width/3, marginTop: height/20, fontSize: 40}} >Tutorial</Text>
+              <View style={styles.infoCard}>
+              <Text style={styles.titleText}>
               {"So, what is the stock market?"}
               {"\n"}
             </Text>
 
-            <Text style={styles.codeHighlightContainer}>
+            <Text >
               {"Stock markets are where buyers and sellers of stocks come together to trade shares in companies."}
             </Text>
-
-            <View style={styles.welcomeContainer}>
-              <Image
-                source={
-                  __DEV__
-                    ? require('../assets/images/tutorial1.png')
-                    : require('../assets/images/tutorial1.png')
-                }
-                style={styles.welcomeImage}
-              />
-            </View>
+              </View>
+            
 
             <Text style={styles.titleText2}>
               {"Understanding the stock market"}
@@ -119,6 +118,15 @@ export default function TutorialScreen() {
   }
 
 const styles = StyleSheet.create({
+  carouselContainer:{
+    paddingTop: 100,
+    paddingBottom: 0,
+    alignItems: 'center',
+    backgroundColor: 'white',
+  },
+  scrollWheel:{
+    width: 375,
+  },
    welcomeImage: {
     width: 500,
     height: 150,
@@ -127,8 +135,11 @@ const styles = StyleSheet.create({
     marginLeft: -10,
   },
   titleText: {
-    fontSize: 21,
-    fontWeight: "bold"
+    fontSize: 28,
+    fontWeight: "bold",
+    paddingLeft: 10,
+    paddingTop:10,
+    color:"#1A741D",
   },
   titleText2: {
     fontSize: 19,
@@ -146,7 +157,7 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   option: {
-    backgroundColor: '#fdfdfd',
+    backgroundColor: '#fafafa',
     paddingHorizontal: 15,
     paddingVertical: 15,
     borderWidth: StyleSheet.hairlineWidth,
@@ -157,7 +168,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
   codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
+    backgroundColor: 'rgba(0,0,0,0.0)',
     borderRadius: 3,
     paddingHorizontal: 4,
     padding: 3
@@ -172,6 +183,26 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 20,
   },
+  infoCard: {
+    backgroundColor: 'white',
+    height: height*0.66,
+    width: width*0.8,
+    borderRadius: 14,
+    marginTop: height/10,
+    marginBottom: 20,
+    marginLeft: width/10,
+    marginRight: 30,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+
+    elevation: 12,
+  },
+
 });
 
               
