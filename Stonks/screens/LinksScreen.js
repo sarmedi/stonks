@@ -20,6 +20,7 @@ class Search extends Component {
     }
   
   componentDidMount(search) {
+    
     // Use this URL to request data from our alpha vantage database
     axios.get(`https://www.alphavantage.co/query?function=symbol_SEARCH&keywords=${search}&apikey=${API_KEY}`)
     .then(res => {

@@ -9,6 +9,8 @@ import {
   } from 'react-native-chart-kit';
 import { useNavigation } from '@react-navigation/native';
 
+
+
 const labels_=['2020-04-17','2020-04-20','2020-04-21','2020-04-22', '2020-04-23','2020-04-24', '2020-04-27'];
 const formatted_labels = ['04/17','04/20','04/21','04/22', '04/23','04/24', '04/27'];
 const new_api="bsf234vrh5rf0ieh0g2g";
@@ -25,9 +27,15 @@ function StockPage({ route, navigation }) {
     const [weekmax, setWeekMax] = useState('');
     const [weekmin, setWeekMin] = useState('');
     const [results, setResults] = useState([{}]);
-    
+
+    const today = Math.floor(new Date().getTime()/1000.0);
+    const startDay = today - 864000;
+    console.log(startDay);
+    console.log(today);
+
     const [line, setLine] = useState({
-            
+        
+        
         labels: ['04-17','04-20','04-21','04-22', '04-23','04-24', '04-27'],
         datasets: [
           {
@@ -36,39 +44,50 @@ function StockPage({ route, navigation }) {
           },
         ],
       });
+
+    //fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`).then(res => res.json())
+        
+
     const [loaded, SetLoaded] =useState(false);
     //When using react native hooks, useEffect() is the same as ComponentDidMount -> runs before rendering.
     useEffect(() =>{
       //API Call to get Data
-        fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=YJR5ZU3OSHN6F0EZ`).then(res => res.json())
+        fetch(`https://finnhub.io/api/v1/stock/candle?symbol=${ticker}&resolution=1&from=${startDay}&to=${today}&token=`).then(res => res.json())
         .then((result_) => {
             // Update the state of results array
             setResults(result_);
-            var data_api = {
-                labels: formatted_labels,
-                datasets: [
-                    {
-                        data: [result_["Time Series (Daily)"][labels_[0]]["4. close"], result_["Time Series (Daily)"][labels_[1]]["4. close"],result_["Time Series (Daily)"][labels_[2]]["4. close"],result_["Time Series (Daily)"][labels_[3]]["4. close"],result_["Time Series (Daily)"][labels_[4]]["4. close"],result_["Time Series (Daily)"][labels_[5]]["4. close"],result_["Time Series (Daily)"][labels_[6]]["4. close"]],
-                        strokeWidth: 2,
-                    }
-                ]
-            }
+            console.log(result_);
+            //dates = result_["Time Series (Daily)"].slice(0,7);
+            // dates = result_["Time Series (Daily)"].slice(start, 7);
 
-            setLine(data_api);
-            setClose(result_["Time Series (Daily)"][labels_[6]]["4. close"]);
-            setOpen(result_["Time Series (Daily)"][labels_[6]]["1. open"]);
-            setHigh(result_["Time Series (Daily)"][labels_[6]]["2. high"]);
-            setVolume(result_["Time Series (Daily)"][labels_[6]]["5. volume"]);
-            setWeekClose([Number(result_["Time Series (Daily)"][labels_[0]]["4. close"]), Number(result_["Time Series (Daily)"][labels_[1]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[2]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[3]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[4]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[5]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[6]]["4. close"])]);
-            setWeekMax(Math.max.apply(Math, weekclose));
-            setWeekMin(Math.min.apply(Math, weekclose));
-            SetLoaded(true);
-            //Set values for all the data
+            // console.log(dates);
+
+            // var data_api = {
+            //     labels: formatted_labels,
+            //     datasets: [
+            //         {
+            //             data: [result_["Time Series (Daily)"][labels_[0]]["4. close"], result_["Time Series (Daily)"][labels_[1]]["4. close"],result_["Time Series (Daily)"][labels_[2]]["4. close"],result_["Time Series (Daily)"][labels_[3]]["4. close"],result_["Time Series (Daily)"][labels_[4]]["4. close"],result_["Time Series (Daily)"][labels_[5]]["4. close"],result_["Time Series (Daily)"][labels_[6]]["4. close"]],
+            //             strokeWidth: 2,
+            //         }
+            //     ]
+            // }
+
+            // setLine(data_api);
+            // setClose(result_["Time Series (Daily)"][labels_[6]]["4. close"]);
+            // setOpen(result_["Time Series (Daily)"][labels_[6]]["1. open"]);
+            // setHigh(result_["Time Series (Daily)"][labels_[6]]["2. high"]);
+            // setVolume(result_["Time Series (Daily)"][labels_[6]]["5. volume"]);
+            // setWeekClose([Number(result_["Time Series (Daily)"][labels_[0]]["4. close"]), Number(result_["Time Series (Daily)"][labels_[1]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[2]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[3]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[4]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[5]]["4. close"]),Number(result_["Time Series (Daily)"][labels_[6]]["4. close"])]);
+            // setWeekMax(Math.max.apply(Math, weekclose));
+            // setWeekMin(Math.min.apply(Math, weekclose));
+            // SetLoaded(true);
+            // //Set values for all the data
         }).catch(error => {
             console.log('found error', error)
           });
     }
     );
+            
     //Checks if data is loaded. If it is, display the chart, if not display a loading indicator
     if (!loaded){
         return (
@@ -125,15 +144,7 @@ function StockPage({ route, navigation }) {
                         Volume: {Number(volume).toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
                     </Text>
                     <Text></Text>
-                    <Text style={styles_stock.titleText3}>
-                        Relevant Tweets:
-                    </Text>
-                    <View style={{ height: 600}}>
-                    <WebView
-                      automaticallyAdjustContentInsets={false}
-                      source={{uri: "https://twitter.com/search?q=%24"+ticker+"&src=typed_query&f=live"}}
-                    />
-                  </View>
+            
                     
                 </ScrollView>
         );
