@@ -22,8 +22,15 @@ export default function TutorialScreen() {
               {"So, what is the stock market?"}
               {"\n"}
             </Text>
-
-            <Text >
+            <Image
+                 source={
+                   __DEV__
+                     ? require('../assets/images/tutorial1.png')
+                     : require('../assets/images/tutorial1.png')
+                 }
+                 style={styles.welcomeImage}
+               />
+            <Text style= {{justifyContent: 'center', textAlign: 'center', top: 10}} >
               {"Stock markets are where buyers and sellers of stocks come together to trade shares in companies."}
             </Text>
               </View>
@@ -128,11 +135,11 @@ const styles = StyleSheet.create({
     width: 375,
   },
    welcomeImage: {
-    width: 500,
+    width: width*0.7,
     height: 150,
     resizeMode: 'contain',
     marginTop: 3,
-    marginLeft: -10,
+    marginLeft: 0,
   },
   titleText: {
     fontSize: 28,

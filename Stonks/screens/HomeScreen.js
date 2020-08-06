@@ -19,6 +19,10 @@ export default function HomeScreen() {
     }).catch(error => {
       console.log('finnhub error', error)
     });
+    for (var i=0; i<results.length; ++i){
+      results[i]["key"] = i;
+    }
+    console.log(results)
   });
   //adds Navigation
 
@@ -130,7 +134,7 @@ elevation: 24,}}>
                       <Text style= {{left:110, top:12, fontSize:18}}onPress={()=> Linking.openURL(item.url)}>Read More</Text>
                   </View>
                   }
-                  keyExtractor={item => item.id}
+                  keyExtractor={item => item.key}
                 />
 
               </View>
