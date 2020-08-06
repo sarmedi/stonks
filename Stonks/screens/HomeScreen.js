@@ -23,7 +23,7 @@ export default function HomeScreen() {
       results[i]["key"] = i;
     }
     console.log(results)
-  });
+  },[]);
   //adds Navigation
 
   return (
