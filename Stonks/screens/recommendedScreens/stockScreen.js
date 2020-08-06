@@ -92,7 +92,7 @@ function StockPage({ route, navigation }) {
             console.log('found error', error)
           });
     }
-    );
+    ,[]);
 
     const [line, setLine] = useState({
         

@@ -19,7 +19,7 @@ export default function HomeScreen() {
     }).catch(error => {
       console.log('finnhub error', error)
     });
-  });
+  },[]);
   //adds Navigation
 
   return (
