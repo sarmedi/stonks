@@ -10,33 +10,30 @@ export default function TutorialScreen() {
     return (
       //Contains a scroll view and images and text, along with more reading at the bottom complete with links.
       <ScrollView style={styles.scrollWheel}
-            horizontal={true}
-            contentContainerStyle={{ width: `80%` }}
-            showsHorizontalScrollIndicator={false}
-            scrollEventThrottle={200}
-            decelerationRate="fast"
-            pagingEnabled>
+      horizontal={true}
+      contentContainerStyle={{ width: `${100 * 2}%` }}
+      showsHorizontalScrollIndicator={false}
+      scrollEventThrottle={200}
+      decelerationRate="fast"
+      pagingEnabled>
               <Text style= {{position: "absolute",justifyContent: 'center', paddingLeft: width/3, marginTop: height/20, fontSize: 40}} >Tutorial</Text>
               <View style={styles.infoCard}>
-              <Text style={styles.titleText}>
-              {"So, what is the stock market?"}
-              {"\n"}
-            </Text>
-            <Image
-                 source={
-                   __DEV__
-                     ? require('../assets/images/tutorial1.png')
-                     : require('../assets/images/tutorial1.png')
-                 }
-                 style={styles.welcomeImage}
-               />
-            <Text style= {{justifyContent: 'center', textAlign: 'center', top: 10}} >
-              {"Stock markets are where buyers and sellers of stocks come together to trade shares in companies."}
-            </Text>
-              </View>
-            
-
-            <Text style={styles.titleText2}>
+                  <Text style={styles.titleText}>
+                    {"So, what is the stock market?"}
+                  </Text>
+                  <Image
+                      source={
+                        __DEV__
+                          ? require('../assets/images/tutorial1.png')
+                          : require('../assets/images/tutorial1.png')
+                      }
+                      style={styles.welcomeImage}
+                    />
+                  <Text style= {{justifyContent: 'center', textAlign: 'center', top: 10}} >
+                    {"Stock markets are where buyers and sellers of stocks come together to trade shares in companies."}
+                  </Text>
+                  <Text/>
+                  <Text style={styles.titleText2}>
               {"Understanding the stock market"}
             </Text>
 
@@ -49,7 +46,10 @@ export default function TutorialScreen() {
             <Text style={styles.codeHighlightContainer}>
               {"Snapchat-owner Snap Inc. listed its shares publicly on the stock market with its 2016 IPO. Its shares now trade on the New York Stock Exchange with the ticker symbol “SNAP”, and they’re available to buy and sell on the stock market by everyday investors like you."}
             </Text>
-
+              </View>
+              <View style={styles.infoCard}>
+              
+              
             <Text style={styles.titleText2}>
               {"\n"}
               {"Takeaway"}
@@ -64,10 +64,8 @@ export default function TutorialScreen() {
               {"\n"}
               {"Connecting stock buyers with stock sellers to trade under an agreed upon set of rules. This is the key role of every stock market, from New York to Hong Kong."}
               {"\n"}
-            </Text>
-
-            <View style={styles.welcomeContainer}>
-              <Image
+            </Text> 
+            <Image
                 source={
                   __DEV__
                     ? require('../assets/images/tutorial2.png')
@@ -75,21 +73,12 @@ export default function TutorialScreen() {
                 }
                 style={styles.welcomeImage}
               />
-            </View>
-
-            <Text style={styles.titleText2}>
+              <Text style={styles.titleText2}>
               {"\n"}
               {"Want to learn more?"}
               {"\n"}
             </Text>
-            
-            <View style={{
-                borderStyle: 'dotted',
-                borderWidth: 1,
-                borderRadius: 1,
-                padding: 5,
-              }}>
-              <Text style={{
+            <Text style={{
                 textDecorationLine: 'underline',
               }}onPress={ ()=> Linking.openURL('https://www.marketreview.com/function-of-stock-markets/') }>
               {"Primary functions of the stock market"}
@@ -115,9 +104,7 @@ export default function TutorialScreen() {
               }}onPress={ ()=> Linking.openURL('https://www.thebalance.com/who-s-watching-your-back-in-stock-market-3141308') }>
                 {"Who regulates stock markets?"}
               </Text>
-            </View>
-            
-            <Text> {"\n"} {"\n"} </Text>
+              </View>
 
 
         </ScrollView>
@@ -155,36 +142,12 @@ const styles = StyleSheet.create({
   container: {
     padding: 25,
     flex: 1,
-    color: '#fafafa',
+    color: '#ffffff',
   },
   contentContainer: {
     paddingTop: 15,
   },
-  optionIconContainer: {
-    marginRight: 12,
-  },
-  option: {
-    backgroundColor: '#fafafa',
-    paddingHorizontal: 15,
-    paddingVertical: 15,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderBottomWidth: 0,
-    borderColor: '#ededed',
-  },
-  lastOption: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.0)',
-    borderRadius: 3,
-    paddingHorizontal: 4,
-    padding: 3
-  },
-  optionText: {
-    fontSize: 15,
-    alignSelf: 'flex-start',
-    marginTop: 1,
-  },
+  
   welcomeContainer: {
     alignItems: 'center',
     marginTop: 10,
@@ -197,8 +160,8 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     marginTop: height/10,
     marginBottom: 20,
-    marginLeft: width/10,
-    marginRight: 30,
+    marginLeft: width/11,
+
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
