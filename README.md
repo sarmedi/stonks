@@ -14,4 +14,4 @@ This is a Stock Market Information App, Revamped by Johnny Pabst and Sarmed Imad
 
 ### Revamp Collaborators 
 - [Sarmed Imadulla](https://github.com/sarmedi)
-- [Johnny Pabst] (https://github.com/johnpabst)
+- [Johnny Pabst](https://github.com/johnpabst)
