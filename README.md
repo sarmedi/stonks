@@ -1,13 +1,17 @@
 # Stonks Forecaster
 
-This is a Stock Market Forecaster program.
+This is a Stock Market Information App, Revamped by Johnny Pabst and Sarmed Imadulla for new features.
 
 ### Attributes
-- Tracks Stock Prices, buys at certain price and sells only at profit. Predicts the rise and fall of stock prices. Searches through stock tickers to find stocks with the most profitability. Will use machine learning and neural networks to choose the stocks.
-- Uses Natural Language Processing to find keywords in new articles of stock that we’re interested in. If the tone of the new articles is negative and has our stock keywords, then we know our stocks will likely go down. Automatically stays up to date with the news.
+- Searches through stock tickers to find stocks with the most profitability. Dynamically finds stock news and stock data, to display them, with a beautiful, scalable ui.
 
-### Collaborators 
+
+### Original Collaborators 
 - [Alex Ding](https://github.com/alexd3301)
 - [Erica Bertolozzi](https://github.com/ericabertolozzi)
 - [Gregory Saini](https://github.com/Defender373)
 - [Sarmed Imadulla](https://github.com/sarmedi)
+
+### Revamp Collaborators 
+- [Sarmed Imadulla](https://github.com/sarmedi)
+- [Johnny Pabst] (https://github.com/johnpabst)
